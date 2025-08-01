@@ -1,1 +1,1 @@
-MODEL_NAME = 'qwen3:8b'
+MODEL_NAME = 'llama3.1:8b'

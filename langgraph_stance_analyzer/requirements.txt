@@ -1,0 +1,5 @@
+langgraph
+langchain
+requests
+langchain_community
+langchain-ollama
