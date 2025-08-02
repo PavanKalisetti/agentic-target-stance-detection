@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agent Interaction UI</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        textarea, input[type="text"] {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .response-box, .history-box {
+            background-color: #e9ecef;
+            border: 1px solid #ced4da;
+            padding: 15px;
+            border-radius: 4px;
+            margin-top: 15px;
+            white-space: pre-wrap;
+            font-family: monospace;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        .section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        .error {
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Agent Interaction UI</h1>
+
+        <div class="section">
+            <h2>Run Agent</h2>
+            <textarea id="inputText" rows="5" placeholder="Enter text for agent analysis..."></textarea>
+            <button onclick="runAgent()">Run Agent</button>
+            <h3>Agent Response:</h3>
+            <pre id="agentResponse" class="response-box"></pre>
+        </div>
+
+        <div class="section">
+            <h2>Agent Run History</h2>
+            <button onclick="getAllAgentRuns()">Get All Runs</button>
+            <pre id="allRunsHistory" class="history-box"></pre>
+        </div>
+
+        <div class="section">
+            <h2>Get Specific Agent Run</h2>
+            <input type="text" id="runIdInput" placeholder="Enter Run ID">
+            <button onclick="getSpecificAgentRun()">Get Specific Run</button>
+            <pre id="specificRunDetails" class="response-box"></pre>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:8000'; // Ensure this matches your FastAPI server address
+
+        async function runAgent() {
+            const inputText = document.getElementById('inputText').value;
+            const agentResponseDiv = document.getElementById('agentResponse');
+            agentResponseDiv.textContent = 'Running agent...';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/run_agent`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ text: inputText }),
+                });
+
+                const data = await response.json();
+                if (response.ok) {
+                    agentResponseDiv.textContent = JSON.stringify(data, null, 2);
+                } else {
+                    agentResponseDiv.textContent = `Error: ${data.detail || 'Unknown error'}
+${JSON.stringify(data, null, 2)}`;
+                    agentResponseDiv.classList.add('error');
+                }
+            } catch (error) {
+                agentResponseDiv.textContent = `Network Error: ${error.message}`;
+                agentResponseDiv.classList.add('error');
+            } finally {
+                agentResponseDiv.classList.remove('error');
+            }
+        }
+
+        async function getAllAgentRuns() {
+            const allRunsHistoryDiv = document.getElementById('allRunsHistory');
+            allRunsHistoryDiv.textContent = 'Fetching all runs...';
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/agent_runs`);
+                const data = await response.json();
+                if (response.ok) {
+                    allRunsHistoryDiv.textContent = JSON.stringify(data, null, 2);
+                } else {
+                    allRunsHistoryDiv.textContent = `Error: ${data.detail || 'Unknown error'}
+${JSON.stringify(data, null, 2)}`;
+                    allRunsHistoryDiv.classList.add('error');
+                }
+            } catch (error) {
+                allRunsHistoryDiv.textContent = `Network Error: ${error.message}`;
+                allRunsHistoryDiv.classList.add('error');
+            } finally {
+                allRunsHistoryDiv.classList.remove('error');
+            }
+        }
+
+        async function getSpecificAgentRun() {
+            const runId = document.getElementById('runIdInput').value;
+            const specificRunDetailsDiv = document.getElementById('specificRunDetails');
+            specificRunDetailsDiv.textContent = 'Fetching specific run...';
+
+            if (!runId) {
+                specificRunDetailsDiv.textContent = 'Please enter a Run ID.';
+                specificRunDetailsDiv.classList.add('error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/agent_runs/${runId}`);
+                const data = await response.json();
+                if (response.ok) {
+                    specificRunDetailsDiv.textContent = JSON.stringify(data, null, 2);
+                } else {
+                    specificRunDetailsDiv.textContent = `Error: ${data.detail || 'Unknown error'}
+${JSON.stringify(data, null, 2)}`;
+                    specificRunDetailsDiv.classList.add('error');
+                }
+            } catch (error) {
+                specificRunDetailsDiv.textContent = `Network Error: ${error.message}`;
+                specificRunDetailsDiv.classList.add('error');
+            } finally {
+                specificRunDetailsDiv.classList.remove('error');
+            }
+        }
+    </script>
+</body>
+</html>

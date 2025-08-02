@@ -3,11 +3,12 @@ from langgraph.graph import StateGraph, END
 from typing import TypedDict, Annotated
 import operator
 
-from agents.agents import target_agent, stance_agent, final_agent
+from langgraph_stance_analyzer.agents.agents import linguistic_agent, target_agent, stance_agent, final_agent
 
 
 class AgentState(TypedDict):
     input: str
+    linguistic_analysis: str
     target: str
     stance: str
     final_response: Annotated[str, operator.add]
@@ -15,10 +16,19 @@ class AgentState(TypedDict):
 
 llm = OllamaLLM(model="llama3.1:8b")
 
+linguistic_runnable = linguistic_agent(llm)
 target_runnable = target_agent(llm)
 stance_runnable = stance_agent(llm)
 final_runnable = final_agent(llm)
 
+def get_linguistic_analysis(state):
+    print("Linguistic Analysis:", end=" ", flush=True)
+    response_content = ""
+    for token in linguistic_runnable.stream({"input": state["input"]}):
+        print(token, end="", flush=True)
+        response_content += token
+    print()  # for newline
+    return {"linguistic_analysis": response_content}
 
 def get_target(state):
     print("Target:", end=" ", flush=True)
@@ -43,9 +53,18 @@ def get_stance(state):
 
 def get_final_response(state):
     print("Final Response:", end=" ", flush=True)
-    input_for_final = f"Target: {state['target']}\nStance: {state['stance']}"
+
+    # The final agent's prompt needs all the previous results.
+    # We pass them in a dictionary that matches the prompt's variables.
+    input_dict = {
+        "linguistic_analysis": state['linguistic_analysis'],
+        "target": state['target'],
+        "stance": state['stance'],
+        "input": ""  # Pass an empty string for the unused 'input' variable
+    }
+
     response_content = ""
-    for token in final_runnable.stream({"input": input_for_final}):
+    for token in final_runnable.stream(input_dict):
         print(token, end="", flush=True)
         response_content += token
     print()  # for newline
@@ -55,11 +74,13 @@ def get_final_response(state):
 # Define the graph
 workflow = StateGraph(AgentState)
 
+workflow.add_node("linguistic_analysis", get_linguistic_analysis)
 workflow.add_node("target_identification", get_target)
 workflow.add_node("stance_detection", get_stance)
 workflow.add_node("final_response_generation", get_final_response)
 
-workflow.set_entry_point("target_identification")
+workflow.set_entry_point("linguistic_analysis")
+workflow.add_edge("linguistic_analysis", "target_identification")
 workflow.add_edge("target_identification", "stance_detection")
 workflow.add_edge("stance_detection", "final_response_generation")
 workflow.add_edge("final_response_generation", END)

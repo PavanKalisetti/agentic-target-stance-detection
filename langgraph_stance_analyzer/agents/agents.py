@@ -15,6 +15,12 @@ def create_agent(llm, prompt_path):
     )
     return prompt | llm
 
+def linguistic_agent(llm):
+    """
+    Returns the linguistic analysis agent.
+    """
+    return create_agent(llm, "/home/rgukt/Documents/major-project/langgraph_stance_analyzer/prompts/linguistic_agent.md")
+
 def target_agent(llm):
     """
     Returns the target identification agent.
