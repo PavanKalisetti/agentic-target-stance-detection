@@ -23,5 +23,5 @@ def stream_chat(model, prompt):
                     if "content" in json_data["message"]:
                         yield json_data["message"]["content"]
                 except json.JSONDecodeError:
-                    # Ignore invalid JSON lines
+                    
                     pass

@@ -7,7 +7,7 @@ import json
 from datetime import datetime
 import os
 
-# Assuming langgraph_stance_analyzer is in the parent directory
+
 import sys
 sys.path.append(os.path.join(os.path.dirname(__file__), ".."))
 from langgraph_stance_analyzer.main import app as langgraph_app
@@ -15,7 +15,7 @@ from langgraph_stance_analyzer.main import app as langgraph_app
 app = FastAPI()
 
 origins = [
-    "*", # Allow all origins for development. In production, specify your UI's origin(s).
+    "*", 
 ]
 
 app.add_middleware(
@@ -45,7 +45,6 @@ async def run_agent(request: RunAgentRequest):
     timestamp = datetime.now()
     input_text = request.text
 
-    # Run the langgraph agent
     try:
         result = langgraph_app.invoke({"input": input_text})
         status = "completed"
@@ -61,7 +60,6 @@ async def run_agent(request: RunAgentRequest):
         "timestamp": timestamp.isoformat()
     }
 
-    # Store the run data locally
     file_path = os.path.join(AGENT_RUNS_DIR, f"{run_id}.json")
     with open(file_path, "w") as f:
         json.dump(run_data, f, indent=4)

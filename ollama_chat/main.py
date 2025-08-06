@@ -17,7 +17,7 @@ def main():
 
             for chunk in stream_chat(MODEL_NAME, prompt):
                 print(chunk, end="", flush=True)
-            print()  # for a new line after the response
+            print()  
 
         except KeyboardInterrupt:
             print("\nExiting...")

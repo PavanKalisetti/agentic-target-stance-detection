@@ -27,7 +27,7 @@ def get_linguistic_analysis(state):
     for token in linguistic_runnable.stream({"input": state["input"]}):
         print(token, end="", flush=True)
         response_content += token
-    print()  # for newline
+    print()  
     return {"linguistic_analysis": response_content}
 
 def get_target(state):
@@ -36,7 +36,7 @@ def get_target(state):
     for token in target_runnable.stream({"input": state["input"]}):
         print(token, end="", flush=True)
         response_content += token
-    print()  # for newline
+    print()  
     return {"target": response_content}
 
 
@@ -47,31 +47,28 @@ def get_stance(state):
     for token in stance_runnable.stream({"input": input_for_stance}):
         print(token, end="", flush=True)
         response_content += token
-    print()  # for newline
+    print()  
     return {"stance": response_content}
 
 
 def get_final_response(state):
     print("Final Response:", end=" ", flush=True)
 
-    # The final agent's prompt needs all the previous results.
-    # We pass them in a dictionary that matches the prompt's variables.
     input_dict = {
         "linguistic_analysis": state['linguistic_analysis'],
         "target": state['target'],
         "stance": state['stance'],
-        "input": ""  # Pass an empty string for the unused 'input' variable
+        "input": ""  
     }
 
     response_content = ""
     for token in final_runnable.stream(input_dict):
         print(token, end="", flush=True)
         response_content += token
-    print()  # for newline
+    print()  
     return {"final_response": response_content}
 
 
-# Define the graph
 workflow = StateGraph(AgentState)
 
 workflow.add_node("linguistic_analysis", get_linguistic_analysis)
