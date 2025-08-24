@@ -26,7 +26,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-AGENT_RUNS_DIR = "/home/rgukt/Documents/major-project/agent_runs"
+AGENT_RUNS_DIR = "/home/rgukt/Documents/major project/major-project/agent_runs"
 os.makedirs(AGENT_RUNS_DIR, exist_ok=True)
 
 class RunAgentRequest(BaseModel):
@@ -46,7 +46,8 @@ async def run_agent(request: RunAgentRequest):
     input_text = request.text
 
     try:
-        result = langgraph_app.invoke({"input": input_text})
+        initial_state = {"input": input_text, "target": "", "max_turns": 3}
+        result = langgraph_app.invoke(initial_state)
         status = "completed"
     except Exception as e:
         result = {"error": str(e)}
