@@ -1,0 +1,97 @@
+<svg width="1400" height="1000" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+    <style>
+        .box { fill: #f0f4f8; stroke: #607d8b; stroke-width: 2; rx: 8; ry: 8; }
+        .agent-box { fill: #e3f2fd; stroke: #1565c0; }
+        .io-box { fill: #fff3e0; stroke: #ef6c00; }
+        .llm-box { fill: #ede7f6; stroke: #5e35b1; }
+        .tool-box { fill: #e8f5e9; stroke: #2e7d32; }
+        .connector { fill: none; stroke: #455a64; stroke-width: 1.5; }
+        .arrow-marker { fill: #455a64; }
+        .text-label { font-size: 14px; text-anchor: middle; fill: #263238; }
+        .title-label { font-size: 24px; text-anchor: middle; font-weight: bold; fill: #1a237e; }
+        .group-box { fill: rgba(179, 229, 252, 0.2); stroke: #0277bd; stroke-width: 2; stroke-dasharray: 8 4; rx: 15; ry: 15; }
+    </style>
+
+    <defs>
+        <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+            <path d="M 0 0 L 10 5 L 0 10 z" class="arrow-marker" />
+        </marker>
+    </defs>
+
+    <text x="700" y="40" class="title-label">System Architecture: Agentic Stance & Target Detection</text>
+
+    <!-- Main Components -->
+    <rect x="50" y="450" width="180" height="80" class="io-box box" />
+    <text x="140" y="495" class="text-label">Input Text</text>
+
+    <rect x="300" y="450" width="180" height="80" class="box" />
+    <text x="390" y="495" class="text-label">FastAPI Server</text>
+
+    <rect x="550" y="80" width="780" height="850" class="group-box" />
+    <text x="940" y="110" class="text-label" font-weight="bold">LangGraph Workflow</text>
+
+    <!-- Agents -->
+    <rect x="600" y="150" width="200" height="80" class="agent-box box" />
+    <text x="700" y="180" class="text-label">1. Linguistic</text>
+    <text x="700" y="200" class="text-label">Analysis Agent</text>
+
+    <rect x="900" y="150" width="200" height="80" class="agent-box box" />
+    <text x="1000" y="180" class="text-label">2. Target Type</text>
+    <text x="1000" y="200" class="text-label">Decider Agent</text>
+
+    <rect x="600" y="280" width="200" height="80" class="agent-box box" />
+    <text x="700" y="310" class="text-label">3a. Implicit Target</text>
+    <text x="700" y="330" class="text-label">Agent</text>
+
+    <rect x="900" y="280" width="200" height="80" class="agent-box box" />
+    <text x="1000" y="310" class="text-label">3b. Explicit Target</text>
+    <text x="1000" y="330" class="text-label">Agent</text>
+
+    <rect x="750" y="420" width="200" height="100" class="agent-box box" />
+    <text x="850" y="460" class="text-label">4. Debate Agent</text>
+    <text x="850" y="480" class="text-label">(Iterative Refinement)</text>
+
+    <rect x="750" y="570" width="200" height="80" class="agent-box box" />
+    <text x="850" y="600" class="text-label">5. Stance</text>
+    <text x="850" y="620" class="text-label">Detection Agent</text>
+
+    <rect x="750" y="700" width="200" height="80" class="agent-box box" />
+    <text x="850" y="730" class="text-label">6. Final XML</text>
+    <text x="850" y="750" class="text-label">Generation Agent</text>
+
+    <rect x="1050" y="820" width="220" height="80" class="io-box box" />
+    <text x="1160" y="850" class="text-label">XML Output</text>
+    <text x="1160" y="870" class="text-label">(Target, Stance, Justification)</text>
+
+    <!-- External Tools -->
+    <rect x="1050" y="430" width="180" height="80" class="tool-box box" />
+    <text x="1140" y="475" class="text-label">Web Search Tool</text>
+
+    <rect x="50" y="750" width="450" height="150" class="llm-box box" />
+    <text x="275" y="780" class="text-label" font-weight="bold">Ollama LLMs</text>
+    <text x="275" y="810" class="text-label">Fine-tuned Models:</text>
+    <text x="275" y="835" class="text-label">- Qwen</text>
+    <text x="275" y="855" class="text-label">- Llama</text>
+    <text x="275" y="875" class="text-label">- DeepSeek</text>
+
+    <!-- Connectors -->
+    <path d="M 230 490 L 300 490" class="connector" marker-end="url(#arrow)" />
+    <path d="M 480 490 L 560 490 L 560 190 L 600 190" class="connector" marker-end="url(#arrow)" />
+    <path d="M 800 190 L 900 190" class="connector" marker-end="url(#arrow)" />
+    <path d="M 1000 230 L 1000 280" class="connector" marker-end="url(#arrow)" />
+    <path d="M 1000 230 C 950 255, 750 255, 700 280" class="connector" marker-end="url(#arrow)" />
+    <path d="M 700 360 C 700 410, 780 410, 780 420" class="connector" marker-end="url(#arrow)" />
+    <path d="M 1000 360 C 1000 410, 920 410, 920 420" class="connector" marker-end="url(#arrow)" />
+    <path d="M 850 520 L 850 570" class="connector" marker-end="url(#arrow)" />
+    <path d="M 850 650 L 850 700" class="connector" marker-end="url(#arrow)" />
+    <path d="M 850 780 L 850 860 C 850 900, 1050 900, 1050 860" class="connector" marker-end="url(#arrow)" />
+    
+    <!-- Tool Connectors -->
+    <path d="M 950 470 L 1050 470" class="connector" marker-end="url(#arrow)" />
+    <path d="M 1050 460 L 950 460" class="connector" marker-end="url(#arrow)" />
+
+    <!-- LLM Connectors -->
+    <path d="M 500 825 L 550 825" class="connector" marker-end="url(#arrow)" />
+    <text x="525" y="810" class="text-label" font-size="12px">LLM Calls</text>
+
+</svg>

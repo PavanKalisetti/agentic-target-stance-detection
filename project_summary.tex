@@ -1,0 +1,79 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{graphicx}
+\usepackage{svg}
+\geometry{a4paper, margin=1in}
+
+\title{A Multi-Agent System for Fine-Grained Stance and Target Detection}
+\author{Pavan}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+The proliferation of opinionated text on social media and other online platforms has created a critical need for automated systems that can accurately determine not only the stance of a text but also the specific target of that stance. Traditional methods often struggle with the nuances of language, particularly in distinguishing between explicitly mentioned and implicitly referenced targets. This project introduces an advanced multi-agent system designed to address these challenges by performing fine-grained stance and target analysis.
+
+Our approach leverages a collaborative framework of specialized AI agents, each tasked with a specific aspect of the analysis pipeline: linguistic feature extraction, explicit and implicit target identification, iterative target refinement through a debate mechanism, and final stance classification. The system is powered by open-source language models (such as Llama, Qwen, and DeepSeek) that are fine-tuned on comprehensive datasets like TSA (Targeted Stance Analysis) and VAST (Value-Aware Stance Towards Topics) to enhance their accuracy and domain-specific understanding. This agentic architecture allows for a more robust and transparent analysis process, capable of handling complex linguistic phenomena and delivering more precise and reliable results in stance detection.
+\end{abstract}
+
+\section{Methodology}
+Our methodology is centered around a modular, agent-based system that deconstructs the complex task of target-based stance detection into a series of manageable sub-problems, each handled by a specialized agent. The process integrates fine-tuned language models with a dynamic, multi-agent workflow.
+
+\subsection{Dataset and Model Fine-Tuning}
+To build a strong foundation for target identification, we will fine-tune several open-source Large Language Models (LLMs), including Qwen, DeepSeek, and Llama. The fine-tuning process will exclusively use datasets containing texts with \textbf{explicit targets}. This focused training is designed to create expert models that can precisely identify clearly mentioned targets, which will serve as a baseline and a key component in our agentic system.
+
+\subsection{Agentic Workflow for Stance and Target Detection}
+The core of our project is a state machine orchestrated by LangGraph, where each step is managed by one or more specialized agents:
+
+\begin{enumerate}
+    \item \textbf{Linguistic Analysis Agent:} This initial agent processes the input text to extract key linguistic features, such as sentiment, tone, and style. This analysis provides essential context for the subsequent agents.
+
+    \item \textbf{Target Type Decider Agent:} Based on the linguistic analysis, this routing agent determines whether the target in the text is likely to be explicit or implicit. This decision dictates which specialized agent is engaged next.
+
+    \item \textbf{Target Generation Agents:}
+    \begin{itemize}
+        \item The \textbf{Explicit Target Agent}, powered by our fine-tuned models, is invoked to identify the target when it is clearly mentioned.
+        \item The \textbf{Implicit Target Agent} is used to infer the target from context, tone, and other indirect cues when it is not directly stated.
+    \end{itemize}
+
+    \item \textbf{Debate Agent:} The initially identified target is passed to a debate agent for validation and refinement. The agent initiates a debate, critically evaluating the proposed target against the text's context. The debate continues iteratively until the agents reach a consensus on the most accurate target.
+
+    \item \textbf{Stance Detection Agent:} With a finalized target from the debate, this agent analyzes the text to determine the author's stance—positive, negative, or neutral—towards that specific target.
+
+    \item \textbf{Final XML Generation Agent:} The concluding agent aggregates all the findings. It synthesizes the refined target and the determined stance. This information is then formatted into a structured XML output with \texttt{<target>} and \texttt{<stance>} tags for clear and machine-readable results.
+\end{enumerate}
+
+\subsection{System Architecture}
+The entire system is exposed through a RESTful API built with FastAPI. This allows for easy integration with other applications and provides endpoints for submitting text for analysis, viewing results, and managing analysis runs. The backend leverages local LLMs served via Ollama, ensuring data privacy and control over the computational resources.
+
+\begin{figure}[h!]
+    \centering
+    \includesvg[width=\textwidth]{system_architecture.svg}
+    \caption{System Architecture Diagram}
+    \label{fig:system_architecture}
+\end{figure}
+
+\subsection{Evaluation}
+The system's performance will be evaluated using a comprehensive set of metrics to ensure a thorough assessment of its capabilities.
+
+\subsubsection{Quantitative Metrics}
+We will use standard metrics for classification tasks, including:
+\begin{itemize}
+    \item \textbf{Accuracy:} The proportion of correct predictions out of the total number of predictions.
+    \item \textbf{Precision:} The proportion of true positive predictions among all positive predictions.
+    \item \textbf{Recall:} The proportion of true positive predictions among all actual positive instances.
+    \item \textbf{F1-score:} The harmonic mean of precision and recall, providing a single score that balances both metrics.
+\end{itemize}
+A comparative analysis of the fine-tuned models will be performed to identify the most effective one for this task. The evaluation will also include an ablation study to assess the contribution of each component, particularly the debate mechanism, to the overall accuracy of the system.
+
+\subsubsection{Qualitative and Semantic Evaluation}
+In addition to the standard metrics, we will employ advanced methods to evaluate the quality and semantic correctness of the system's output:
+\begin{itemize}
+    \item \textbf{Gemini-based Evaluation:} We will leverage a powerful Gemini model as an impartial judge to assess the quality of the generated targets and stances. This will provide a human-like evaluation of the system's reasoning and output.
+    \item \textbf{Semantic Similarity:} To evaluate the accuracy of the identified targets, we will use semantic similarity metrics (e.g., cosine similarity on sentence embeddings) to compare the generated target with a ground-truth target. This will allow us to measure how closely the system's output matches the intended meaning, even if the exact wording is different.
+\end{itemize}
+
+\end{document}

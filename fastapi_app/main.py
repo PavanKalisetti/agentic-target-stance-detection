@@ -26,7 +26,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-AGENT_RUNS_DIR = "/home/rgukt/Documents/major project/major-project/agent_runs"
+AGENT_RUNS_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "agent_runs"))
 os.makedirs(AGENT_RUNS_DIR, exist_ok=True)
 
 class RunAgentRequest(BaseModel):
