@@ -13,7 +13,7 @@ from langgraph_stance_analyzer.agents.agents import (
     stance_agent,
     final_agent,
 )
-from langgraph_stance_analyzer.tools import web_search
+
 
 
 class AgentState(TypedDict):
@@ -83,20 +83,10 @@ def get_explicit_target(state):
 
 def get_target_info(state):
     """
-    Fetches information about the target using the web_search tool.
+    This is a placeholder function now that web search is removed.
     """
-    print("Fact Checking Target:", end=" ", flush=True)
-    target = state.get("target", "").strip()
-    if not target:
-        print("No target to search.")
-        return {"target_info": "No information found."}
-    
-    # Call the web search tool
-    search_result = web_search(target)
-    print("----------search result-------------")
-    print(search_result)
-    print("-----------------------")
-    return {"target_info": search_result}
+    print("Skipping Fact Checking.")
+    return {"target_info": "No external information available."}
 
 def debate_turn(state):
     print(f"Debate Turn {len(state['debate_history']) + 1}:", end=" ", flush=True)
