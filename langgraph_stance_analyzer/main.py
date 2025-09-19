@@ -13,12 +13,14 @@ from langgraph_stance_analyzer.agents.agents import (
     stance_agent,
     final_agent,
 )
+from langgraph_stance_analyzer.tools import web_search
 
 
 class AgentState(TypedDict):
     input: str
     linguistic_analysis: str
     target: str
+    target_info: str # New field for external info
     stance: str
     final_response: Annotated[str, operator.add]
     debate_history: List[str]
@@ -70,7 +72,6 @@ def get_implicit_target(state):
     print()
     return {"target": response_content}
 
-
 def get_explicit_target(state):
     print("Explicit Target:", end=" ", flush=True)
     response_content = ""
@@ -80,13 +81,33 @@ def get_explicit_target(state):
     print()
     return {"target": response_content}
 
+def get_target_info(state):
+    """
+    Fetches information about the target using the web_search tool.
+    """
+    print("Fact Checking Target:", end=" ", flush=True)
+    target = state.get("target", "").strip()
+    if not target:
+        print("No target to search.")
+        return {"target_info": "No information found."}
+    
+    # Call the web search tool
+    search_result = web_search(target)
+    print("----------search result-------------")
+    print(search_result)
+    print("-----------------------")
+    return {"target_info": search_result}
 
 def debate_turn(state):
     print(f"Debate Turn {len(state['debate_history']) + 1}:", end=" ", flush=True)
     response_content = ""
     # The debate agent now returns XML, so we handle it as a single string
     for token in debate_runnable.stream(
-        {"input": state["input"], "debate_history": "\n".join(state["debate_history"]) } 
+        {
+            "input": state["input"],
+            "debate_history": "\n".join(state["debate_history"]),
+            "target_info": state["target_info"], # Pass new info
+        }
     ):
         print(token, end="", flush=True)
         response_content += token
@@ -101,6 +122,8 @@ def debate_turn(state):
             new_target_element = root.find("new_target")
             if new_target_element is not None and new_target_element.text:
                 new_target = new_target_element.text.strip()
+                # When the target changes, we should probably re-run the fact check.
+                # For now, we just update the target and continue the debate.
                 return {"target": new_target, "debate_history": state["debate_history"] + [response_content]}
 
         # If agree is true, or if the XML is malformed but we don't want to error out,
@@ -113,34 +136,35 @@ def debate_turn(state):
         # Add the raw (and broken) response to history and continue the debate
         return {"debate_history": state["debate_history"] + [response_content]}
 
-
 def continue_debate(state):
+    # If the target was changed in the last turn, we should re-run fact-checking.
+    last_response = state["debate_history"][-1]
+    if "<new_target>" in last_response:
+         return "get_target_info" # Go back to fact-checking with the new target
+
     if len(state["debate_history"]) >= state["max_turns"]:
         return "stance_detection"
 
-    last_response = state["debate_history"][-1]
     try:
         root = ET.fromstring(last_response)
         agree_element = root.find("agree")
         if agree_element is not None and agree_element.text == "true":
             return "stance_detection"
     except ET.ParseError:
-        # If the last response was not valid XML, continue the debate
+        
         return "debate"
 
     return "debate"
 
-
 def get_stance(state):
     print("Stance:", end=" ", flush=True)
-    input_for_stance = f"Text: {state['input']}\nTarget: {state['target']}"
+    input_for_stance = f"Text: {state['input']}\nTarget: {state['target']}\nBackground Information: {state['target_info']}"
     response_content = ""
     for token in stance_runnable.stream({"input": input_for_stance}):
         print(token, end="", flush=True)
         response_content += token
     print()
     return {"stance": response_content}
-
 
 def get_final_response(state):
     print("Final Response:", end=" ", flush=True)
@@ -165,6 +189,7 @@ workflow = StateGraph(AgentState)
 workflow.add_node("linguistic_analysis", get_linguistic_analysis)
 workflow.add_node("implicit_target_identification", get_implicit_target)
 workflow.add_node("explicit_target_identification", get_explicit_target)
+workflow.add_node("get_target_info", get_target_info) # New node
 workflow.add_node("debate", debate_turn)
 workflow.add_node("stance_detection", get_stance)
 workflow.add_node("final_response_generation", get_final_response)
@@ -180,8 +205,9 @@ workflow.add_conditional_edges(
     },
 )
 
-workflow.add_edge("implicit_target_identification", "debate")
-workflow.add_edge("explicit_target_identification", "debate")
+workflow.add_edge("implicit_target_identification", "get_target_info") # Edge to new node
+workflow.add_edge("explicit_target_identification", "get_target_info") # Edge to new node
+workflow.add_edge("get_target_info", "debate") # Edge from new node
 
 workflow.add_conditional_edges(
     "debate",
@@ -189,6 +215,7 @@ workflow.add_conditional_edges(
     {
         "stance_detection": "stance_detection",
         "debate": "debate",
+        "get_target_info": "get_target_info", # Loop back if target changes
     },
 )
 
@@ -222,3 +249,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

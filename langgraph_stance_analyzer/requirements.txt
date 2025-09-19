@@ -3,3 +3,4 @@ langchain
 requests
 langchain_community
 langchain-ollama
+beautifulsoup4
