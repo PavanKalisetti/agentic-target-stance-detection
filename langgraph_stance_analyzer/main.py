@@ -225,7 +225,7 @@ def main():
 
             print("-- Analysis --")
             # Set the initial target to an empty string
-            initial_state = {"input": user_input, "target": "", "max_turns": 5}
+            initial_state = {"input": user_input, "target": "", "max_turns": 3}
             app.invoke(initial_state)
             print("------------------")
 

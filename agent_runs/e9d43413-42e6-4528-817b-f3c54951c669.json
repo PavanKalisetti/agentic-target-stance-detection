@@ -1,0 +1,13 @@
+{
+    "run_id": "e9d43413-42e6-4528-817b-f3c54951c669",
+    "status": "failed",
+    "input_text": "\"From beginning to end, I believe the Bible is the infallible word of God and I accept it in whole, not in part. As such, I believe the Bible is clear that homosexuality is a sin.\" Is it clear? The ancient Israelites inherited a law that homosexual acts (particularly outside of a straight marriage) were sinful, but the rest of the Bible is silent on gay and lesbian people in committed relationships, or possibly it even hints at approval in the story of David and Jonathan. Anti-gay theology is a clear case of the very slicing and dicing that ultra-conservatives claim to abhor. Anyway, a people who accepted the whole Bible would have a lot of child-murder to do. Clearly even ultra-conservative Christians don't take the ancient laws at face value. If they did, then they might be allowed to claim religious liberty as an excuse to preach that gays exist outside of God's plan for humanity. But because they don't, and because the whole Bible is not clear on the subject, this boils down to a belief held by a group of people. We typically don't tolerate bigoted beliefs, sincere though they may be.",
+    "original_label": "AGAINST",
+    "original_topic": "homosexuality",
+    "predicted_target": "invocation_error",
+    "predicted_stance": "invocation_error",
+    "result": {
+        "error": "Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    "timestamp": "2025-09-19T15:15:26.229414"
+}

@@ -1,9 +1,0 @@
-{
-    "run_id": "0cea814b-7ebe-4c8e-91f9-f97001fe9d10",
-    "status": "failed",
-    "input_text": "climate change is bad for earth",
-    "result": {
-        "error": "'max_turns'"
-    },
-    "timestamp": "2025-08-07T12:10:38.005640"
-}

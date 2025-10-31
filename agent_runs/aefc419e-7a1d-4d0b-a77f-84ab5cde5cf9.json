@@ -1,9 +1,0 @@
-{
-    "run_id": "aefc419e-7a1d-4d0b-a77f-84ab5cde5cf9",
-    "status": "failed",
-    "input_text": "environment change is bad for earth\n",
-    "result": {
-        "error": "'max_turns'"
-    },
-    "timestamp": "2025-08-11T17:09:23.131801"
-}

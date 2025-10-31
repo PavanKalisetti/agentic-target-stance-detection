@@ -1,0 +1,13 @@
+{
+    "run_id": "a36e299f-a058-4822-b24b-895390339bf5",
+    "status": "failed",
+    "input_text": "\"From beginning to end, I believe the Bible is the infallible word of God and I accept it in whole, not in part.\" Ah, yes. So given that God's word in the Bible is infallible, we should be putting gay people to death, right? \"God gave them over to shameful lusts. Even their women exchanged natural sexual relations for unnatural ones. 27 In the same way the men also abandoned natural relations with women and were inflamed with lust for one another...Although they know God's righteous decree that those who do such things deserve death, they not only continue to do these very things but also approve of those who practice them.\"",
+    "original_label": "AGAINST",
+    "original_topic": "a harmful atmosphere for gays",
+    "predicted_target": "invocation_error",
+    "predicted_stance": "invocation_error",
+    "result": {
+        "error": "Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    "timestamp": "2025-09-19T15:27:35.311157"
+}

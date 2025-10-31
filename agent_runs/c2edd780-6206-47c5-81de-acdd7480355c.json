@@ -1,0 +1,13 @@
+{
+    "run_id": "c2edd780-6206-47c5-81de-acdd7480355c",
+    "status": "failed",
+    "input_text": "\"A revivified C.I.A. is necessary today to fight against radicalism, militancy and the forces of anarchy that threaten the region from Bangladesh to Morocco.\" Mr. Nawaz, the CIA is one of the biggest contributors to radicalism and wars. Your own country of origin is exhibit 1.",
+    "original_label": "FAVOR",
+    "original_topic": "the c.i.a. is necessary",
+    "predicted_target": "invocation_error",
+    "predicted_stance": "invocation_error",
+    "result": {
+        "error": "Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    "timestamp": "2025-09-19T11:48:09.233618"
+}

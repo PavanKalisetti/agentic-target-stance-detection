@@ -1,0 +1,23 @@
+{
+    "run_id": "7cf622ef-2128-4219-84ba-6288c9dde6e4",
+    "status": "completed",
+    "input_text": "\"Assuming an unpaid internship is mutually beneficial and entered into freely by both parties, should such arrangements be illegal? \" Just because we young people constitute a \"willing party\" when entering into an internship doesn't mean we are actually \"willing\". We simply have no choice. After all, for the ambitious among us, what's the alternative? Unless you have your sights on a career in venture capitalism/finance/etc., non-remunerated internships are all we know.",
+    "original_label": "AGAINST",
+    "original_topic": "unpaid intenship",
+    "predicted_target": "Unpaid Internships",
+    "predicted_stance": "negative",
+    "result": {
+        "input": "\"Assuming an unpaid internship is mutually beneficial and entered into freely by both parties, should such arrangements be illegal? \" Just because we young people constitute a \"willing party\" when entering into an internship doesn't mean we are actually \"willing\". We simply have no choice. After all, for the ambitious among us, what's the alternative? Unless you have your sights on a career in venture capitalism/finance/etc., non-remunerated internships are all we know.",
+        "linguistic_analysis": "**Linguistic Analysis Summary**\n\n* **Tone:** Critical, sarcastic, and slightly condescending\n* **Sentiment:** Negative towards unpaid internships and the societal expectations placed upon young people\n* **Style:**\n\t+ Uses rhetorical questions to engage the reader and challenge assumptions\n\t+ Employs emotive language (\"we simply have no choice\", \"non-remunerated internships are all we know\") to convey a sense of desperation and powerlessness\n\t+ Includes subtle irony (\"the ambitious among us\") to highlight the limited options available to young people\n* **Linguistic features:**\n\t+ Uses quotation marks around words like \"willing\" and \"beneficial\" to imply that these terms are often misused or misleading\n\t+ Employes antithesis (\"entered into freely by both parties\" vs. \"we simply have no choice\") to contrast the idealized situation with the harsh reality",
+        "target": "Exploitation of young people through unpaid internships",
+        "target_info": "No external information available.",
+        "stance": "Negative\n\nThe text expresses criticism towards the exploitation of young people through unpaid internships, suggesting that despite appearing willing, they often have no choice but to participate. The tone is critical and disapproving of such arrangements, indicating a negative stance towards the target.",
+        "final_response": "<response><target>Unpaid Internships</target><stance>negative</stance></response>",
+        "debate_history": [
+            "<response>\n    <agree>false</agree>\n    <new_target>Exploitation of young people through unpaid internships</new_target>\n    <justification>The proposed target focuses too narrowly on the issue of legality, whereas the text suggests that the primary concern is the exploitative nature of these arrangements.</justification>\n</response>",
+            "<response>\n    <agree>true</agree>\n</response>"
+        ],
+        "max_turns": 3
+    },
+    "timestamp": "2025-09-19T12:28:30.380559"
+}

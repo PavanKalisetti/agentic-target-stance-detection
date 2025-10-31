@@ -1,0 +1,13 @@
+{
+    "run_id": "9b84cd00-8cdb-46f1-9192-c059256daf23",
+    "status": "failed",
+    "input_text": "\"Despite consistently high popular support for legalization, Congress has failed to act.\" I keep reading this bogus claim peddled by pro-amnesty enthusiasts about enormous support for \"legalization\" of illegal immigrants, but have yet to see any evidence of it. As a matter of fact, the reverse is true as proven by the rise of Trump and other politicians who are campaigning against illegal immigration. Why does the NYT keep publishing this falsehood?",
+    "original_label": "AGAINST",
+    "original_topic": "illegal immigration",
+    "predicted_target": "invocation_error",
+    "predicted_stance": "invocation_error",
+    "result": {
+        "error": "Recursion limit of 25 reached without hitting a stop condition. You can increase the limit by setting the `recursion_limit` config key.\nFor troubleshooting, visit: https://python.langchain.com/docs/troubleshooting/errors/GRAPH_RECURSION_LIMIT"
+    },
+    "timestamp": "2025-09-19T14:05:32.589303"
+}
