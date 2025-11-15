@@ -60,6 +60,19 @@ def parse_json_from_response(response_str: str):
 
 # --- Graph State ---
 class AgentState(TypedDict):
+# --- Graph Definition ---
+workflow = StateGraph(AgentState)
+
+workflow.add_node("linguistic_analyzer", linguistic_analyzer_node)
+workflow.add_node("target_detector", target_detection_node)
+workflow.add_node("stance_detector", stance_detection_node)
+
+workflow.set_entry_point("linguistic_analyzer")
+workflow.add_edge("linguistic_analyzer", "target_detector")
+workflow.add_edge("target_detector", "stance_detector")
+workflow.add_edge("stance_detector", END)
+
+app = workflow.compile()
     post: str
     new_topic: str # Ground Truth Target from vast.csv
     label: str     # Ground Truth Stance from vast.csv

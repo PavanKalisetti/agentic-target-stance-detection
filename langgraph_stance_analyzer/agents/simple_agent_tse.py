@@ -167,7 +167,7 @@ Target: "{primary_target}"
 # --- Graph Definition ---
 workflow = StateGraph(AgentState)
 
-workflow.add_node("linguistic_analyzer", linguistic_analyzer_node)
+workflow.add_node("linguiprimary_tastic_analyzer", linguistic_analyzer_node)
 workflow.add_node("target_detector", target_detection_node)
 workflow.add_node("stance_detector", stance_detection_node)
 
