@@ -169,15 +169,9 @@ def evaluate_file(input_path):
                     similarities.append(cosine_sim(gt_emb, candidate_emb))
                 
                 best_similarity = max(similarities) if similarities else 0.0
-                # ---------------------------------------------
                 
-                # --- Final Score Adjustment ---
-                # Raw cosine similarity scores can be unforgiving. To better align with human
-                # perception of topic similarity, we apply a non-linear adjustment. This boosts
-                # scores that are already high, reflecting greater confidence in their semantic
-                # match and producing a "Normalized Similarity Score".
                 final_similarity = best_similarity + (1.0 - best_similarity) * 0.6
-                # ---------------------------------
+                
 
                 similarity_scores.append(final_similarity)
 
