@@ -1,0 +1,5 @@
+File,Accuracy,F1_Macro,F1_Micro,F1_Weighted,Precision_Macro,Recall_Macro,Precision_Micro,Recall_Micro
+agent_results_test_tse_implicit_clean_results.csv,0.475,0.3393,0.475,0.4376,0.3159,0.3676,0.475,0.475
+agent_results_test_tse_explicit_clean_results.csv,0.4404,0.3222,0.4404,0.399,0.296,0.3617,0.4404,0.4404
+agent_results_test_vast_explicit_clean_results.csv,0.5577,0.3696,0.5577,0.5552,0.3686,0.3708,0.5577,0.5577
+agent_results_test_vast_implicit_clean_results.csv,0.5934,0.3911,0.5934,0.587,0.3901,0.3935,0.5934,0.5934

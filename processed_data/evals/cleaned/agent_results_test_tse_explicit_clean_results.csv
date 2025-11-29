@@ -1,0 +1,573 @@
+tweet,target,stance,Predicted_Target,Predicted_Stance,Raw_Cosine_Similarity,Stance_Correct
+Indian #MeToo tweet spike surpasses US monthly data https://t.co/vPKASX0Ys6,metoo movement,FAVOR,indian #metoo movement,FAVOR,0.89875,True
+"""In December 2017, The Walt Disney Company agreed to a 52.4-billion-dollar deal to acquire 21st Century Fox, includâ¦ https://t.co/PccL2D2yBQ",merger of disney and fox,FAVOR,merger of disney and fox,AGAINST,1.0,False
+"It can't. It's a free choice, it's not like married gay people are out to get us and murder us in our sleep. I honestly don't know why everyone makes such a fuss about it I MEAN HONESTLY. GOODNESS. That's kind of discrimination.",gay rights,FAVOR,gay marriage,FAVOR,0.7522500000000001,True
+"@AdamJKucharski The results of a serology study in New York might augur what a comparable city could expect but be wholly inconsistent with rural counterparts. Ultimately, I think we have a flu with a slightly more productive R mitigated by social distancing/awareness/masks/lockdowns.",lockdown in new york state,FAVOR,new york,FAVOR,0.8000000000000002,True
+"#HarshikaPoonacha says some actresses taking #MeToo For Publicity
+
+read more: https://t.co/2ePQkZy6SQ
+
+#arjunsarja
+#SruthiHariharan #prakashRaj #Metoo #MeTooIndia https://t.co/ZtzGhkGDIM",metoo movement,NONE,metoo movement,AGAINST,1.0,False
+How was your weekend while in #lockdown or #quarantine? What #games are keeping you busy?  Stay safe! #csgo #counterstrike #esports #gaming #videogames #seniorgamer #graygamer #worldchampion #csgoworldchamp #csgoskins #esports #ESL #nyc #trump https://t.co/OXQMaQcL6l,lockdown in new york state,NONE,covid-19,FAVOR,0.69075,False
+This is disgraceful. Fox is letting Fake News win. The takeover of this country can only be saved by force. https://t.co/P0jB6hS4D0,merger of disney and fox,NONE,fake news,FAVOR,0.8597499999999999,False
+A changing planet: 4 places where climate change is taking its toll #SemST,climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+$DIS $CMSA $FOXA DISNEY AND COMCAST ARE IN ACTIVE TALKS WITH 21ST CENTURY FOX. DISNEY HAS RE-ENGAGED IN DISCUSSIONSâ¦ https://t.co/ysRhDpHEid,merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+Disney &amp; Fox Deal Expected To Be Completed By Summer 2019! https://t.co/3bi32n4y1y https://t.co/VJs9QyzGrk,merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+Comcast May Have Complicated The Disney Fox Deal - The huge Disney Fox deal may have just grown more complicated. Câ¦ https://t.co/wp4bknowqu,merger of disney and fox,AGAINST,merger of disney and fox,AGAINST,1.0,True
+"Today our feeds are overflowing with a good dose of karma for not-so-neighborly neighborhood watchers, the #MeToo anniversary, @SerenaWilliams' latest boss move, and more! @Charreah is here with the scoop... https://t.co/tykXDUeh24  #InMyFeed https://t.co/L69UWUZN1S",metoo movement,FAVOR,me too movement,FAVOR,0.844,True
+Walt Disney Co. (@Disney) has renewed discussions to purchase some of the assets of 21st Century Fox. Rumors indicaâ¦ https://t.co/EQGR383Sy9,merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+An evening of timbits and a Disney film! ðâ¨ .. maybe The Fox and The Hound? https://t.co/fR3RJ6ncmA,merger of disney and fox,NONE,disney films,AGAINST,0.696,False
+"Disney talk to acquire some of Fox, Wentworth Miller is done with CW shows, No more Alien films? The Movie News Feed https://t.co/TaaSNnile1",merger of disney and fox,FAVOR,disney,FAVOR,0.8757500000000001,True
+@Rewaters2 @BeverlyWendlin1 @charliekirk11 Our Taoiseach was with Trump in NY 11 March when the pandemic was announced and we went into immediate lockdown and trump continued to ignore it. We wonÕt reopen until September at earliest and we are not demonstrating because we have great leadership and care for other humans.,lockdown in new york state,FAVOR,lockdown,AGAINST,0.9335000000000001,False
+Why the culture of 'shaming the family' is dangerous for #MeToo | @NotThatNairita | https://t.co/dLvVLDprDt | #MallikaDua #FarhanAkhtar #FarahKhan https://t.co/I4xa2SK7dS,metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+(2/2) 300 words and be sent to climateconference2015@gmail.com #sustainability #sustainabledevelopment #SemST,climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+Donald Don't Grab That Pussy teaches kids to pet animals correctly. https://t.co/t73rWhwYc1 #NotMyPresident #Resist#Trump #VladimirPutin #FBRParty #FBR #DemForce#VoteThemOut2018 #PutinsPuppet #MeToo https://t.co/n8i9ZTFsHI,metoo movement,NONE,donald trump,FAVOR,0.551,False
+"41% of women voted for @realDonaldTrump in 2016. After recent events and the #metooâ  â  movement, Iâm pretty sure Trump can kiss his political career goodbye. Or any career for that matter. And MEN! SUPPORT OUR WOMEN!! #VoteThemOutNov6th https://t.co/a8XWSmOKyb",metoo movement,AGAINST,metoo movement,FAVOR,1.0,False
+âRupert Murdoch is set to sell off 21st Century Fox assets to Disney and the deal will reportedly be announced befoâ¦ https://t.co/DoMNZH9CNl,merger of disney and fox,FAVOR,disney,FAVOR,0.7850000000000001,True
+"Over the first year of #MeToo, it has been helpful to look to the young for guidance: https://t.co/84tEvjT2hT https://t.co/1ZH0MWuclw",metoo movement,FAVOR,metoo movement,FAVOR,1.0,True
+"""Barack Obama's Military Adviser Says to Stick With Gay Ban."" US News and World Report. October 31, 2008
+",gay rights,AGAINST,gay ban in the military,AGAINST,0.6955,True
+Google's '#metoo' moment: Workers walk out over women's rights https://t.co/rTydM4Twhj #news #business #social https://t.co/C07v4k6Qx7,metoo movement,FAVOR,google,AGAINST,0.5227500000000002,False
+"$DIS $FOXA:
+
+Disneyâs Fox Deal: What We Know And What We Still Want to Know:
+
+https://t.co/QIT57Cg4rQ",merger of disney and fox,NONE,merger of disney and fox,AGAINST,1.0,False
+"Ali Morris from #VAWDASV #Swansea talks about how the #DeedsNotWords campaign supports its work to raise awareness of the domestic abuse and violence experienced by women in #Wales
+#WorldMentalHealthDay2018 #WMHD18 
+#TimesUp #metoo https://t.co/91W89dlMrQ",metoo movement,AGAINST,deeds not words,AGAINST,0.46125,True
+"@DavidJNage @NYGovCuomo You will inevitably be in a worse condition and have enforced lockdown until next year if the USA gov and governors dont take this seriously. 
+
+I'm in the UK. The lockdown isnt great but it will help save lives. We will keep going until it's safe. 
+
+If trump gets his way.....",lockdown in new york state,FAVOR,trump,AGAINST,0.5624999999999999,False
+"Tehrik-e-Niswan holds its 4th Women's Peace Table in Karachi on Sat 27th Oct from 10.30am till 6pm at Arts Council of Pakistan, focusing on issues of sexual harassment and the #MeToo Campaign. Women speak out on harassment! Come and join us! Break the Silence! https://t.co/1LIoCr9lSK",metoo movement,FAVOR,metoo movement,FAVOR,1.0,True
+"@Timcast Is this where bloody #metoo has led us? I've seen some things but, bloody hell, I'm having difficulty getting my head round this. And who the hell is going to tell that traumatised innocent child we are not all knuckle heads. https://t.co/MjHXq45mJG",metoo movement,AGAINST,metoo,AGAINST,0.8815000000000001,True
+Movement Lost Its Way: #MeToo Founder https://t.co/QznMLDailQ,metoo movement,NONE,metoo movement,AGAINST,1.0,False
+"@ericblazka @JavierRojasj @GovRaimondo @RIHEALTH @NationalGuard Any scientific study has a control group- we haven't. We jumped head into this lockdown because nyc which has millions of people shoulder to shoulder was freaking out. The only controls we have is Sweden, which has the same death rate as US",lockdown in new york state,AGAINST,lockdown,AGAINST,0.7522500000000001,True
+And @NYGovCuomo said that the lockdowns wouldn't create more cases of domestic violence and subsequent death. https://t.co/LBWFZi2xBZ,lockdown in new york state,FAVOR,lockdown,AGAINST,0.8405000000000001,False
+This morning in the streets of #Bruxelles- Nothing can stop girlsâ dreams #MeToo @MeTooEP @arantxacalvera #JamaisSansElles #NeRienLaisserPasser #Girl2Leader #GirlPower @JumpEquality @isabellajump @maitea6 @WPLGlobalForum @EuropeanWomen https://t.co/nnhNtq3uFw,metoo movement,AGAINST,brussels,FAVOR,0.4520000000000002,False
+"ICYMI: That X-Men/Marvel Studios union might not happen, as Comcast considers topping Disney's bid for Fox...â¦ https://t.co/sr3A9s30A6",merger of disney and fox,AGAINST,merger of disney and fox,FAVOR,1.0,False
+@abcnews @Ginger_Zee  how about you give me TWO SENTENCES about climate instead of ending with a bs whale story. #SemST,climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+" Religious organizations oppose homosexuality Many religious bodies oppose homosexuality and, therefore, gay marriage. Many of these organizations are the moral foundation of national constitutions and principles. While a separation of church and state should be upheld, the moral guidance of religious organizations should not be denied.
+",gay rights,AGAINST,gay marriage,FAVOR,0.7542499999999999,False
+It is high time my story was covered.. Thankyou @soumyavajpayee @runcaralisarun and all the people who supported me. @abhendra_kumar your @TIMESUPNOW #TimesUp #MeToo https://t.co/qVpXWclTqw,metoo movement,NONE,#metoo movement,FAVOR,0.96975,False
+"@Debra523955641 @ImSelfMadeYouJ1 @bermanzbb @NYGovCuomo We will go in n out of lockdown still the vaccine happens, but they will also hav antibody testing so some people could still go out n wrk rather than the entire country",lockdown in new york state,NONE,lockdown,FAVOR,0.7522500000000001,False
+"Blah. Forget it. I'm not going to beat around the bush. I think a child having two fathers or two mothers is completely unnatural. It's not the way nature intended. Nature did intend for gay people to be around, but not for them to have children.",gay rights,AGAINST,gay rights,AGAINST,1.0,True
+"MCU Phase 1, TFA and select Pixar/Disney movies are back in rotation in @netflix wonder whatâs up. Is the Disney/Fox deal canceled?",merger of disney and fox,AGAINST,disney movies,FAVOR,0.7555000000000001,False
+"TRENDING: Disney Back in Talks to Buy Fox.  Could an Announcement Happen Soon?
+
+https://t.co/hYgykyXj2q https://t.co/nxMxPvLRda",merger of disney and fox,FAVOR,merger,FAVOR,0.79675,True
+"Writing an article on the Prospect Park rape and the police failure in it. Just dug up the old article where here name was smeared publicly, it's heartbreaking ð­! 
+
+SHE DESERVES MORE THAN AN APOLOGY. 
+THIS IS RAPE CULTURE.
+
+#rapeculture
+#lgbtq
+#MeToo https://t.co/2Pcjj5D3OI",metoo movement,FAVOR,rape culture,FAVOR,0.822,True
+"Disney, 21st Century Fox talks have gotten a 2nd wind, deal still possible: Report https://t.co/ltMEXCmOJR",merger of disney and fox,FAVOR,disney,AGAINST,0.7289999999999999,False
+"Disney unveils latest addition to the âDisney Princessesâ franchise as 20th Century Fox takeover talks progress.
+
+https://t.co/zjqIvUkZt3",merger of disney and fox,FAVOR,disney princess,AGAINST,0.6542500000000001,False
+#Mission:#Climate @ home > Wrap your water heater in an insulation blanket #Tip #ActOnClimate #SemST,climate change is a concern,FAVOR,insulation blankets,AGAINST,0.6185000000000002,False
+"Disney to purchase 21st Century Fox for $66.1 billion, creating new mega-conglomerate - World Socialist Web Siteâ¦ https://t.co/YgiXBe86Zr",merger of disney and fox,FAVOR,merger,AGAINST,0.79675,False
+"Now that the Disney/Fox deal has happened this is closer to becoming reality.
+
+(Fanmade wallpaper found on DeviantAâ¦ https://t.co/HgUzctWMOX",merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+"very eloquent. why does it hurt you? 2 gay men are getting the same benefits a married couple would get, and the same benefits they would get if each of them would be married to a woman respectively",gay rights,FAVOR,gay rights,AGAINST,1.0,False
+"#MeToo to destroy family system. So that no one can practice Halal sex &amp; produce children which is their Agenda 21.But then what for Man &amp; woman? How they will satisfy themselves?? Ans= Its simple just to turn ""Homosexuals""  that's why they r promoting  LBGT agenda in the worldð https://t.co/2FMl823BDi",metoo movement,AGAINST,metoo movement,FAVOR,1.0,False
+"Dedicated to those who are for or against #metoo  : 3
+#selfawareness #socialawareness #organisationalawareness #mindfulness #ethics  #sustainability  #compassion #mentoring  #learning #leadership https://t.co/TmQqsg4TQE",metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+"Just so we're clear Disney does not own Fox yet
+So Fox is gonna continue business as usual
+A lot of things can happâ¦ https://t.co/88CHhRuAh1",merger of disney and fox,AGAINST,fox news,AGAINST,0.8655000000000002,True
+"@GeneralHospital @MauriceBenard @FirstTake @stephenasmith Propaganda outlets 
+
+fox = Murdock.
+ 
+Viacom,(espn,disneyâ¦ https://t.co/2BxNEwgw2h",merger of disney and fox,NONE,propaganda,AGAINST,0.4327500000000001,False
+"@mitchellvii As long as the residents of NY allow him to act in a tyrannical way, he will continue to extend the lockdown.",lockdown in new york state,AGAINST,new york,FAVOR,0.9145,False
+"As we speak, flights from Coronavirus hotzones like China, Iran, Italy, Spain, France, New York (USA) and almost any country are not banned.
+
+People stroll in.
+No checks. No tests. No measures.
+
+Just stroll in and walk right into the country. This is why lockdown is useless here.",lockdown in new york state,AGAINST,lockdown,AGAINST,0.9462500000000001,True
+#Disney in talks to purchase #television assets from 21st Century Fox | Ball State Daily https://t.co/EVAw8QtP9uâ¦ https://t.co/oDTCmbT5Pj,merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+"Early look at data from 100 New York hospitals shows that 66% of new admissions related to the virus are people who were at home, #Cuomo #Plandemic #lockdownextension #lockdown",lockdown in new york state,AGAINST,lockdown extension,AGAINST,0.9217500000000001,True
+Seems I may yet get my Climate Apocalypse >:) You fucking morons! #Shenhua #LNPFAIL #keepitintheground #SemST,climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+"#Help #support #empowering #women #awareness #project #Metoo #sisterhood
+Building #Hope and Help to Stop Rapes in India!
+You can Help at: https://t.co/Ls1hTNYggB https://t.co/ZMkhvOBZqQ",metoo movement,FAVOR,stop rapes in india,AGAINST,0.8682500000000001,False
+"#CSOTA is trending at #3 in Canada on Twitter Now w/ 3,800 Tweets from the #Climate Summit of the Americas! #sm #socialmedia #SemST",climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+"@DeanLeh @earthguardianz excellent speech! Well done. showed ur video to Birdie,she is ready to be part of the change. #rise #SemST",climate change is a concern,NONE,climate change,FAVOR,0.8430000000000001,False
+"Intelligent Design is a dishonest way for   creationism   to try to appear scientific.  It's kind of silly when you think about it. Denying nature, the creationists attempt to replace   evolution   with biblical nonsense.  They pretend that some bodiless ghost is the cause of everything in the universe and conceal their beliefs behind a psuedo-scientific cloak of ""intelligent design.""",creationism,AGAINST,creationism,AGAINST,1.0,True
+"#MeToo: Raveena Tandon talks about workplace harassment, how heroesâ wives, girlfriends got her fired from films https://t.co/PV8bkwiO82 https://t.co/qHaBEksxQp",metoo movement,FAVOR,metoo movement,FAVOR,1.0,True
+RT @Whitetruckfixer: @ACTBrigitte He actually is threatening to extend the lockdown over this! NYC must be freed up to heal!,lockdown in new york state,AGAINST,lockdown,FAVOR,0.7522500000000001,False
+Climate change is an emergency. Stop denial and start taking steps. #climatehealth #SemST,climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+#Mission:#Climate on the road > Give your car a break (by @EPA) #Tip #SemST,climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+"@SteveMcNY @fud31 For the last three plus weeks, ever since Cuomo announced his lockdown out of town/downstaters have flooded summer camps here in the Adirondacks. Every weekend there are more &amp; more NJ, CT, Mass plates, who knows how many from NYC area. Hiking trails overrun, RV parks open. https://t.co/VFlupVIkj9",lockdown in new york state,NONE,lockdown,AGAINST,0.9590000000000001,False
+New post (Foxtel and Fox Sports to merge by June) has been published on Business - https://t.co/WdtAUyqRry,merger of disney and fox,NONE,merger,AGAINST,0.79675,False
+RT @CarlosdelRio7: Excellent piece in @NewYorker by @Atul_Gawande in which he talks about how to safety end lockdowns https://t.co/lZL205gbÉ,lockdown in new york state,AGAINST,lockdowns,AGAINST,0.74275,True
+"@maddow New York, Illinois, and California have bankrupted themselves because of anti- business, high tax policy, and now this lockdown.",lockdown in new york state,AGAINST,lockdown,FAVOR,0.8899999999999999,False
+If @EPA & @POTUS don't have to follow SCOTUS why should anyone else have to #ClimateFraud #SpecialReport #WakeUpAmerica #SemST,climate change is a concern,AGAINST,climate change is a hoax,AGAINST,0.7087499999999999,True
+@NZStuffBusiness Time to change the Government! #fracking #C02 #methane #pollution #cancer #health #earthquake #water #leaks #SemST,climate change is a concern,FAVOR,fracking,AGAINST,0.6887499999999999,False
+"Listen up #PussyHat/#PinkWave, carry pepper spray and wear pointy steel toed shows (aim for the jewels), you are now officially in the age of the (boundary issues) orange pig. #KavanaughConfirmed #MeToo #BeBest #BlueWave https://t.co/x1E3iyVfNe",metoo movement,FAVOR,kavanaugh,AGAINST,0.52125,False
+"Since Iâve got a Disney inspired books that has got exo/bts on Wattpad, shall i do The Fox And The Hound on Seho or a different ship?",merger of disney and fox,NONE,bts,FAVOR,0.6779999999999999,False
+"Gays the military would harm military leadership. Gays in the military would adversely affect the chain of command in the military, as certain relationships would become less trustworthy and tensions would undermine the authority of leaders and the willingness of troops to follow.
+",gay rights,AGAINST,gay rights,AGAINST,1.0,True
+" Most health care organizations support gay parenting as equally capable as heterosexual parenting These organizations are the most capable of determining the capabilities of homosexuals to perform dutifully as parents. 
+",gay rights,FAVOR,gay parenting,AGAINST,0.70775,False
+RT @vuto2: @MAYFENDII @NYGovCuomo Just don't call it a lockdown or a shelter in place and everyone will think it's fine and dandy. I know!É,lockdown in new york state,FAVOR,lockdown,AGAINST,0.9520000000000001,False
+"@marcorubio Florida didnÕt even go into lockdown. Look at NJ and NY . We were the epicenter and we are opening slowly. What do you think opening up is if not socializing? You donÕt open in vacuum. You know what else is socializing? : Tulsa, Mount Rushmore https://t.co/42VC23gTgX",lockdown in new york state,NONE,opening up,AGAINST,0.8335,False
+With the Fox/Disney merger not taking effect for a year....everything production next year is safe people. After mmmmm not so much,merger of disney and fox,AGAINST,fox disney merger,FAVOR,0.9517500000000001,False
+"Declaration of IndependenceIN CONGRESS, JULY 4, 1776The unanimous Declaration of the thirteen united States of AmericaWe hold these truths to be self-evident, that all men are created equal, that they are endowed by their Creator with certain unalienable Rights, that among these are Life, Liberty and the pursuit of Happiness.",gay rights,AGAINST,declaration of independence,FAVOR,0.6074999999999999,False
+"Disney Resumes Talks to Acquire Fox Assets - Deal is reportedly back on the cable, with Comcast also expressing intâ¦ https://t.co/a2lhpyJNWX",merger of disney and fox,FAVOR,merger of disney and fox,AGAINST,1.0,False
+@NYGovCuomo He plans on keeping the lockdown in place until he can get a bailout for the deficit he put New York in. All you did was waste our tax dollars for failed projects and illegals! Worse governor ever!,lockdown in new york state,AGAINST,new york state,AGAINST,0.9367500000000001,True
+Follow @ClimatParis2015 for information on #CFCC15 - the climate change conference in Paris. #SemST,climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+"RT @fboLoud: So if the #CCPVirus doesn't kill you...
+
+Murders in NYC surge for second week in a row as coronavirus lockdown continues
+
+#ImpÉ",lockdown in new york state,AGAINST,coronavirus lockdown,FAVOR,0.8294999999999999,False
+New York orders people to wear masks in public places Governor delivers extra mitigation measure as he outlines hurdles to lifting lockdownÊ https://t.co/6Gq52YpB4U via @FT,lockdown in new york state,NONE,lockdown,FAVOR,0.7522500000000001,False
+"I woke up to fire and thunder inside my soul. The elements clashing, a sign of energy, I survived.
+
+Guess what? Iâm still alive. 
+And now, Iâm coming for you.
+For #MeToo. https://t.co/pn84V9YCy3",metoo movement,AGAINST,metoo,FAVOR,0.8815000000000001,False
+The slippery slope argument comes in if you use a 14th Amendment argument but it isn't. It's a Full Faith and Credit argument. A   marriage   from one state HAS to be recognized in all the states. Once Iowa legalized   gay marriage   the argument against gay marriage became moot!,gay rights,FAVOR,gay marriage,AGAINST,0.7522500000000001,False
+"Rekha Sharma on #metoo 
+
+Looks like none of the victims even the celebrity ones have approached NCW which promises support.
+In a case where one or more victims have made their identity known, I guess it would be good to seek NCW support. https://t.co/YcFk6CUVmv",metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+"Teaching the creationism-evolution controversy is important to student learning. - One of the greatest lessons that a school can teach its students is the ability to use their own logic and reasoning to develop an objective opinion of the world around them. By teaching creationism in the classroom, schools are broadening students' knowledge. It is possible to teach both creationism and evolution in the same school. The goal is to expose students to all widely held 'beliefs'. The path to understanding requires the teaching of both Creationism and Evolution. 
+",creationism,FAVOR,creationism,FAVOR,1.0,True
+" Children always benefit from two parents (gay or straight) instead of one ""Single-parent mom"" is an all too frequent term. It is costly to children, primarily from the standpoint of having half the support that a child deserves. Married gay couples can provide twice the support that a single parent can provide, and this is always a good thing.
+",gay rights,FAVOR,gay couples,AGAINST,0.7384999999999999,False
+There's Another Player In That Potential Disney/Fox Deal: Talks between Disney and 21th Century Fox have reportedlyâ¦ https://t.co/WosqIpS1Br,merger of disney and fox,AGAINST,disney merger,FAVOR,0.9095,False
+Pamela Anderson criticized the #MeToo movement https://t.co/Pf9KLyzXbd https://t.co/LpVQxhfBtJ,metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+FOX says Gotham (aka DC) isn't in danger due to the Disney/Marvel merger. Don't expect any conflicts. #TCA18,merger of disney and fox,NONE,fox,FAVOR,0.86725,False
+We are working to elect climate-friendly governments across North America #FeelTheBern #NDP #LPC #GPC #BQ #HARPERPAC.CA #SemST,climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+"'#MeToo Movement Will Make System More Transparent,' Says This Film Producer https://t.co/x8S6hRlZrR https://t.co/cZYqvwfwR4",metoo movement,FAVOR,metoo movement,FAVOR,1.0,True
+@NYGovCuomo Be careful. Our outbreak in Panama was minimal in comparison but one week out of lock down and we are right back in. Over 500 new cases in a week. We opened up too early.,lockdown in new york state,FAVOR,lockdown,FAVOR,0.91775,True
+"@FiveRights The lockdown has gone beyond TDS. ItÕs about money. CA, NY, WA, etc. have ruined their already shaky fiscal status with lockdowns. They know @realDonaldTrump will never approve a stimulus package that bails them out. Their only hope is Biden. They have no choice but Òall inÓ.",lockdown in new york state,AGAINST,lockdown,FAVOR,0.7522500000000001,False
+Banishing the mental health stigma in the workplace #WorldMentalHealthDay #ItsOkNotToBeOk #MentalHealth #MeToo #TimesUp https://t.co/ACpPPbl2Zj https://t.co/o8CVT9juy5,metoo movement,NONE,mental health stigma,FAVOR,0.42975000000000013,False
+"""Disney is now doubling down in its communications investments with the pending $52-billion acquisition of Fox... https://t.co/di0Puw2VPQ",merger of disney and fox,NONE,disney,AGAINST,0.7250000000000001,False
+"@7728014746priy1 @Nikhilk239 Many nuns have joined the #MeToo movement &amp; revealed their trauma of sexual harassment in churches!
+ 
+ #ImmoralActsInChurches revealed once again
+ https://t.co/jVFDx0K767 https://t.co/6iW9rUuZoV",metoo movement,FAVOR,metoo movement,FAVOR,1.0,True
+How the US and Italy traded places on coronavirus https://t.co/L6nUWSLFNd #USA #UK #Brexit #Trump #Johnson #Covid19 #China #Coronavirus #lockdown #quarantine #strategy #italy #germany #france #security #risk #publichealth #medicine #pandemic #business #economy #NYC #california,lockdown in new york state,NONE,coronavirus,AGAINST,0.7989999999999999,False
+@ChrisCuomo Dems should be encouraging the Trumpers to defy lockdown orders. Now that will be as smart as the evil #MoscowMitch! @nytimes @washingtonpost,lockdown in new york state,AGAINST,trumpers,AGAINST,0.773,True
+#MeToo - Payal Rohatgi rekindles sexual harassment allegations against Dibakar Banerjee; questions if YRF will continue with work with him   https://t.co/qzhTOKRSJH https://t.co/GieRjIwml2,metoo movement,NONE,sexual harassment allegations against Dibakar Banerjee,FAVOR,0.6932499999999999,False
+"RT @EmmaDaly: Such cruelty: #NYC is a pandemic epicenter in lockdown, but Trump administration is still pushing deportation cases, forcingÉ",lockdown in new york state,AGAINST,immigration reform,FAVOR,0.5582500000000001,False
+"Imagine  if @ajaydevgn Would  have kissed some actress at random function. 
+Kajol Crazy fans reactions...?? 
+#MeToo
+ðµðð https://t.co/mV0nNehrqf",metoo movement,AGAINST,#metoo,AGAINST,0.96975,True
+@marialb_ms @Mikey_Ten_Toes @NYCMayor Healthy and welfare is being destroyed by these lockdowns. Not preserved. Covid is not the only singular threat to the planet. The media has deceived you.,lockdown in new york state,AGAINST,lockdowns,AGAINST,0.8222499999999999,True
+"Throwing a wrench in Fox's Disney asset deal, Comcast jumps into the fray with a $31 billion bid for Skyâ¦ https://t.co/kxNcrf78jI",merger of disney and fox,AGAINST,merger of disney and fox,AGAINST,1.0,True
+Shakti Kapoor REQUESTS PM Modi to CURB #MeToo Wave! | Bollywood News - Times Now https://t.co/DzJTkcQMgH https://t.co/EVAIRZOjWP,metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+RT @victoriaswatson: @WhiteHouse @POTUS What a wonderful exchange between two of the world's greatest men! Really touching. # #SemST,climate change is a concern,NONE,semST,FAVOR,0.7284999999999999,False
+Resisting coronavirus fear by cooking Whole Food Plant Based: I've lost 45 pounds my weight loss coach in Australia Andrew Taylor Spud Fit Podcast on back in to lock down where he is I sure hope we don't go that direction here in New York https://t.co/nyiG38uRpV,lockdown in new york state,NONE,coronavirus,AGAINST,0.47600000000000003,False
+"It's a Done Deal! Disney Destroys Competitors, Purchases Fox For Over 50 Billion! - https://t.co/fyI8PuIuy2 https://t.co/1Z4xOSyRXD",merger of disney and fox,FAVOR,merger,AGAINST,0.79675,False
+"I'm not against the gay community in general, but there is a problem with the word ""marry"". By definition it implies a union between a man and a woman. a gay marriage is an oxymoron.",gay rights,AGAINST,gay marriage,FAVOR,0.82325,False
+I liked a @YouTube video https://t.co/37Nwyxs3WT BREAKING NEWS Disney &amp; FOX Close to a Deal,merger of disney and fox,FAVOR,merger,FAVOR,0.79675,True
+"'Men need to speak up about sexual harassment and assault'
+.
+.
+.
+An insightful 'Letter to the Editor' from Peter Roemer â
+.
+.
+.
+#safercities #BetterTogether #change #empowered #equality #MeToo #TimesUp #BreakTheSilence
+
+https://t.co/chxuYlyBL1 https://t.co/g2Klqt6ScO",metoo movement,NONE,metoo movement,FAVOR,1.0,False
+There is need for world economic powers to be true about climate change funding. The world needs action not empty rhetorics #SemST,climate change is a concern,FAVOR,climate change funding,FAVOR,0.7065000000000001,True
+"In the age of #MeToo and biased laws, men are suffering. Let's paint Airtel Delhi Half Marathon on 21st Oct with sufferings and pain of men to bring the focus back...#Run4MensCommission #MeToo4Publicity #SpeakUpMan https://t.co/JGf25V3hVU",metoo movement,FAVOR,#MeToo,AGAINST,0.96975,False
+Further uncertainty re the #DisneyFoxDeal: Comcast 'may try to top Disney's bid for Fox' https://t.co/wuWSTFvZz4 Imâ¦ https://t.co/qipveq8t9l,merger of disney and fox,AGAINST,merger of disney and fox,AGAINST,1.0,True
+"@Hi_IQ_Trump @dkelle1 @ashishkjha There's just no point in engaging with somebody who after this length of time doesn't get it. TX is now at 10,000+ cases a day, something NY State why through for a period of a week under full lockdown. You are so going to blow through their numbers. How can people be so dim",lockdown in new york state,FAVOR,reopening texas,AGAINST,0.8042499999999999,False
+" Military gay ban increases discrimination/violence against gays A ban on gays in the military has the effect of legitimizing anti-gay views, as well as anti-gay discrimination and violence. 
+",gay rights,FAVOR,military gay ban,FAVOR,0.66,True
+"""even if   homosexuality   were determined to be genetic, this doesnÕt force me to accept myself as gay""It doesn't force you to deny your personal reality, either. THAT is a choice you make.",gay rights,FAVOR,homosexuality,AGAINST,0.8380000000000001,False
+If ther clmate change alarmists come out in sept this year and tell me this was the hottest winter on record ill go postal #SemST,climate change is a concern,AGAINST,global warming,AGAINST,0.6742500000000001,True
+"Disney slides on news its close to deal with Fox ( $DIS, $FOXA ) -  https://t.co/QnBJpYtTKC",merger of disney and fox,FAVOR,disney,AGAINST,0.78125,False
+"It really doesn't matter whether your born gay or not. Americans have civil rights guaranteed by the constitution because they're American. I am gay but I was born American, that should be enough.",gay rights,FAVOR,gay rights,FAVOR,1.0,True
+"@jemelehill #BoyCottESPN @espn @Disney For their extremely racist on air ""talent"" I never knew how Good Fox sportsâ¦ https://t.co/qoUOxa1q4c",merger of disney and fox,NONE,black commentators,AGAINST,0.83625,False
+"#FF @YebSano, @Alex_Verbeek, @AboutREnergy, @ClimateThing, & @Recycle2Print. Work for a #green energy future. #SemST",climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+#MeToo Movement: Producer Bhushan Kumar accused of harassment by anonymous Twitter user https://t.co/wpna7XKvHY https://t.co/umJBvHnXFT,metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+"@TimesNow #LockdownRoadmap 
+Extend lockdown till April end 
+Malls /theatres/open spaces /beaches /parks /educational institutions will be closed till June 
+Work from home option till May 
+Phase out lockdown or else we will be next New York :::(god forbid )",lockdown in new york state,FAVOR,lockdown till april end,AGAINST,0.8777499999999999,False
+"Look how Modi protecting his #MeeToo Minister ðððððð.
+#KuchKuchHotaHai #WorldFoodDay #Rampal #MeToo #trollsangh https://t.co/ngqfy7T8YS",metoo movement,AGAINST,#metoo movement,FAVOR,0.96975,False
+"@mixinpurple Almost. NYC is asking that people try to stay at home but they are understanding if you want to go for a jog or a walk. So, essentially, the same as Chicago, but maybe because of tighter spaces in NYC, they can't encourage leisurely walks.
+
+These are not Chinese-style lockdowns.",lockdown in new york state,FAVOR,new york,AGAINST,0.8000000000000002,False
+"Why would it? If you dont like it, then guess what? You have nothing to do about it! Gay people exist! They are part of our world! The shouldnt be humiliated and, why on earth, would they be?They have a right just like everyone else, they are not aliens!!",gay rights,FAVOR,gay rights,FAVOR,1.0,True
+"the world's most insensitive man (and serial philanderer) champions the #MeToo movement, there's no clearer sign than that that BoJo is openly campaigning to be our next PM. https://t.co/Z3yxBsKhqC",metoo movement,NONE,metoo movement,AGAINST,1.0,False
+"One of the million examples of why we canât abandon common sense &amp; fairness for empty virtue-signaling directed at an entire gender, race or religion. @MeTooMVMT #metoo @Alyssa_Milano @amyschumer @maziehirono @SenKamalaHarris @SenGillibrand @SenateDems @womensmarch #women https://t.co/zZrzxD15ix",metoo movement,AGAINST,#metoo movement,AGAINST,0.96975,True
+"That X-Men/Marvel Studios union might not happen, as Comcast considers topping Disney's bid for Fox...â¦ https://t.co/ibdAlKubl1",merger of disney and fox,AGAINST,marvel studios,AGAINST,0.7725000000000001,True
+@GavinNewsom @nbcbayarea @abc7newsbayarea  why is CA now at least 10 times the cases in NY. What did we do wrong.why is our curve not following NY. I had high hopes for CA. We had the stricktest lockdown for months. Sorely disappointed. I hope you have answers.,lockdown in new york state,NONE,lockdown,AGAINST,0.7522500000000001,False
+Comcast is reportedly considering to outbid Disney for Fox's film and TV assets. (via @CNBC) https://t.co/DsrFH5oe6U,merger of disney and fox,AGAINST,merger of disney and fox,AGAINST,1.0,True
+you arent born with homosexuality. there is no gay gene. it is all from influences from your peers and society. that statement was unfounded.,gay rights,AGAINST,gay rights,AGAINST,1.0,True
+"@DeanMeminger @NY1 @Smartear How interesting Cuomo &amp; DeBlazero lock NY down, 3 mnths. Until last wk you would be arrested 4 going 2 work or not wearing a mask. If you protest in masses it's ok 2 them. Wake up NY. Protest lockdown.  #COVID #COVID_19 #coronavirus #coronavirusnewyork @NYGovCuomo @NYCMayor",lockdown in new york state,AGAINST,protest,FAVOR,0.7975000000000001,False
+"""I felt ashamed of where I worked (Bollywood film industry) when I got to know about the #MeToo allegations against @SimplySajidK and @aloknath"", says @sushant_says 
+#MeTooIndia #SheThePeople #Bombaywaali @ColorsTV https://t.co/QJsfkPQ4Mf",metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+"@UN_Spokesperson @FRANCE24 @UN @COP21 @NorwayMFA ""We are the last generation who can address this climate change #SemST",climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+"Is it even possible to have a #MeTooMovement in #India? Is our society mature enough to understand what the #movement is all about? A lot of women are taking up genuine victim's time for their 2mins of fame. A mutual conversation is not #harassment
+
+#Shame #MeTooIndia #MeToo https://t.co/ikcChY6srC",metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+"On speaking up: âthey can take away my career... the things that really matter, they canât take away from me.â - @oliviamunn @GirlUp #GirlHero said her mom told her: âWho needs Hollywood? We make smoothies on the beach in Costa Rica...â ð love her and her mom so much! #metoo https://t.co/CanOli6Y0z",metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+I liked a @YouTube video https://t.co/szxDXov99U BREAKING NEWS Disney &amp; FOX Deal Falls Through as Comcast Buys SKY Network,merger of disney and fox,AGAINST,merger of disney and fox,FAVOR,1.0,False
+@FoxNews LOL. Too bad all the other scientists agree with him. #ClimateChangeDenier #SemST,climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+"ð Disney announces interest in buying âX-Men,â âDeadpoolâ &amp; more from 21st Century Fox. https://t.co/f9dEZ90M8V https://t.co/bdSR1xVgQy",merger of disney and fox,FAVOR,merger of disney and fox,AGAINST,1.0,False
+Walt Disney Co (DIS.N) is in the lead to acquire much of Twenty-First Century Fox Incâs (FOXA.O) media empireâ¦ https://t.co/yAVXRZp2dg,merger of disney and fox,FAVOR,disney,FAVOR,0.7250000000000001,True
+@apurpleshadow @Brewersfan221 @the_pike_man @CNN @ChrisCuomo IÕm saying letÕs be smart lockdown for another month and then slowly maturely open the economy. It needs to be safe for everyone.,lockdown in new york state,FAVOR,lockdown,FAVOR,0.7522500000000001,True
+"All eyes on China, reports @ClimateNexus - plan building on agreement with US re: #emissions expected soon #cop21 #ghg #SemST",climate change is a concern,FAVOR,china,FAVOR,0.6187500000000001,True
+So that's why strong anti-gay people will shoot a gay person just because they're gay? That's why Westboro Baptist Church pickets the funerals of fallen soldiers? If that's not hatemongering then I don't know what is. ,gay rights,FAVOR,gay rights,AGAINST,1.0,False
+Disney doesn't need Fox entertainment rights. This is how a monopoly runs a society. https://t.co/bgBLnrQpfL,merger of disney and fox,AGAINST,fox news,FAVOR,0.7117500000000001,False
+"I doubt the connection between circumcised men, Lower Class men and becoming Gay. Could you direct me toward the dubious studies from which you make this claim?",gay rights,FAVOR,gay men,AGAINST,0.76125,False
+"Before her voice could be heard....account of victim of Vinod dua got suspended.  
+#PresstitutePower #MeToo https://t.co/NFIsVdJQpF",metoo movement,NONE,#metoo movement,AGAINST,0.96975,False
+"The Walt Disney Company to Acquire Twenty-First Century Fox, Inc., After Spinoff of Certain Businesses, for $52.4 Bâ¦ https://t.co/0yLU5DaraC",merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+"Here we go again: #Disney has re-entered talks to acquire parts of 21st Century Fox, and #Comcast is reportedly still in the mix.",merger of disney and fox,FAVOR,21st century fox,FAVOR,0.78125,True
+Comcast is considering a renewed pursuit of 21st Century Fox after its substantially higher bid than Disneyâs was râ¦ https://t.co/Ii3FiMNnqA,merger of disney and fox,AGAINST,merger,AGAINST,0.79675,True
+Disney to buy much of 21st Century Fox in $52B US takeover - Business - CBC News https://t.co/NjuDP5f4Gd ââ¦ https://t.co/jV9VL3lIqi,merger of disney and fox,FAVOR,merger of disney and fox,AGAINST,1.0,False
+"Disneyâs talks to acquire assets from 21st Century Fox may be over, at least for now https://t.co/7jijjtxsPr https://t.co/fbM1ijNi3x",merger of disney and fox,AGAINST,merger of disney and fox,FAVOR,1.0,False
+".@ClimatParis2015, the climate science forum begins today. Follow its progress on #CFCC15 #SustainableDevelopment #SemST",climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+"RT @InProportion2: For some it is so obvious that lockdowns save lives it doesn't need to be discussed.
+
+Gov. Cuomo of NY is discovering thÉ",lockdown in new york state,FAVOR,lockdown,AGAINST,0.7522500000000001,False
+"Comcast dropping its bid for Fox assets... Ryan Lizza ""dismayed"" by The New Yorker's decision... Seth Rogen set toâ¦ https://t.co/0WKMN1Yc9D",merger of disney and fox,FAVOR,comcast,FAVOR,0.7055,True
+Ben Fritz sees Netflix as the specter behind Disney's dalliance with buying 21st Century Fox's entertainment assets. https://t.co/qTu3JDOC0u,merger of disney and fox,NONE,netflix,AGAINST,0.6335000000000002,False
+" Gays strengthen the institution of marriage by showing that they want to be a part of it Homosexuals honor the institution of marriage by pressing so hard for it. They make it clear to society that it is something special.
+",gay rights,FAVOR,gay rights,FAVOR,1.0,True
+Yash Raj Films Sacks Top Executive After Aspiring Actress Reveals #MeToo Experience https://t.co/4KieTnURA0 https://t.co/sBnPSGQrZl,metoo movement,AGAINST,metoo movement,FAVOR,1.0,False
+"BREAKING: Disney is in talks to buy Fox's movie &amp; TV studios, a move which would revert X-Men &amp; Fantastic 4 rightsâ¦ https://t.co/emJH9m9SQk",merger of disney and fox,FAVOR,disney buying fox,AGAINST,0.7925000000000001,False
+"Disney renews interest in buying much of Rupert Murdoch's Fox empire. In a related story, @Disney prints more moneyâ¦ https://t.co/1DdCLzii45",merger of disney and fox,FAVOR,merger of disney and fox,AGAINST,1.0,False
+"#Media merger wars: Comcastâs bid to undercut Disneyâs purchase of Fox.
+
+""The  reason Sky is key has to do with theâ¦ https://t.co/gBkFH1EA9E",merger of disney and fox,AGAINST,merger of fox and disney,FAVOR,0.9937500000000001,False
+"Hopefully Disney is smart enough to let Fox operate and produce projects mainly on their own, and let them make mature films, please.",merger of disney and fox,NONE,fox films,AGAINST,0.92225,False
+"It hurts families, the more gay marriage the less families there will be, children need a mother and a father to look up to.",gay rights,AGAINST,gay marriage,AGAINST,0.7542499999999999,True
+"@Ra_Bies @prafulm08 The objective of #MeToo movement is #MoneyExtortion or personal vendetta.
+
+Either you succumb to the pressure and pay out the money or face the destruction of your career &amp; reputation.
+
+#metoo is a product of #FeminismIsCancer
+#FeminismIsHypocrisy
+#FeminismIsTerrorism https://t.co/UDhTHzcwyg",metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+@Alyssa_Milano Thank you for your unwavering activism. Please enjoy my #MeToo #TimesUp #BelieveSurvivors illustrated/written work in return. Let's bone those who would silence us. https://t.co/tJtvWrH56K,metoo movement,FAVOR,metoo,FAVOR,0.8815000000000001,True
+NY didnÕt need a set curfew bc everyone was compliant in staying home and extending PAUSE. We even outed other folks if they were being stupid during lockdown. But now NY is acting against the curfew bc everyone knows what and who itÕs targeting. End the fucking curfew,lockdown in new york state,AGAINST,new york,AGAINST,0.8000000000000002,True
+"@VP Hey #Pence -- The #Trump regime needs to look in the mirror.
+
+#WhereAreTheChildren #FreePress #metoo #MobRuleDemocrats #maga https://t.co/97a171GcCw",metoo movement,FAVOR,trump,AGAINST,0.5830000000000002,False
+"@rajsan2017 @vel_jaya @BDUTT @RavinarIN @sunetrac remember @ArvindKejriwal asking the rape victim to 'Compromise Kar Lo "" ? The lady  who was raped by his party colleague, later committed suicide ....   ..    
+
+Secret behind why Kejriwal hasn't joined #metoo campaign yet .. !! https://t.co/Lj09ZK7XNh",metoo movement,NONE,kejriwal,AGAINST,0.556,False
+Could present a majpr issue in the deal #Disney made with #Fox.  #NBCUniversal #Comcast  https://t.co/CFqzsMTvHf,merger of disney and fox,AGAINST,disney,FAVOR,0.7542499999999999,False
+"@priyankac19 Hey Italian Chammach !!
+
+Where is Sukanya Devi who Gang raped in Amethi  ?? #MeToo ? https://t.co/4K6dcyTOMZ",metoo movement,FAVOR,gang rape,FAVOR,0.6405,True
+"Finance: Disney slides after Comcast tops 21st Century Fox's bid for Sky (DIS, FOXA, CMCSA)  
+Comcast will bid ...â¦ https://t.co/KPmg5NmFec",merger of disney and fox,AGAINST,sky,AGAINST,0.6392500000000001,True
+"1) That's reasonable.2) I didn't down-vote you. However, I STILL can't think of good argument against your gay animals list.3) OK",gay rights,FAVOR,gay animals,FAVOR,0.8680000000000001,True
+"@tigerz614 @MatthewBetley @JackPosobiec @realDonaldTrump @NYGovCuomo @NYCMayor bruh... forget November how many of these rioters are gonna get covid19 and they are being arrested and put in prison.. how many prisoners are gonna get covid19..
+
+The entire country is gonna be in a quarantine lockdown again with even harsher restrictions in 14 days.",lockdown in new york state,FAVOR,lockdown,AGAINST,0.77775,False
+Bold move #Disney to acquire #Fox $52B #entertainment #telecom #Amazon #Netflix https://t.co/ymqYhVfSPo,merger of disney and fox,FAVOR,disney,FAVOR,0.7250000000000001,True
+https://t.co/cGbkkwFHAS Little Mix have penned song about #MeToo movement https://t.co/reBsA16PMP https://t.co/gcWoVTgnFR,metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+"@Lrihendry @NYGovCuomo @GovMurphy will try to keep the lock down in place and then ask for a federal bailout.
+
+This is when states should be looking to tighten their belt and cut frivolous costs.
+
+Also open states under @realDonaldTrump guidelines and start collecting payroll &amp; sales taxes.",lockdown in new york state,AGAINST,reopening,FAVOR,0.6112500000000001,False
+"$CMCSA could pursue $FOXA again, per @WSJ, after losing out to $DIS in earlier bidding. https://t.co/vvsxEsLm1t",merger of disney and fox,AGAINST,fox,AGAINST,0.7775000000000001,True
+"Gays in the military will not undermine military efficacy. Former Senator and Secretary of Defense William Cohen spoke against the policy publicly in early January 2007: ""I now believe that if gay men and lesbians served openly in the United States military, they would not undermine the efficacy of the armed forces.""[2]
+",gay rights,FAVOR,gay rights,AGAINST,1.0,False
+"So the @Disney talks to buy @20thcenturyfox IP fell through. If the @Sony / #Fox talks donât work out, Iâm startingâ¦ https://t.co/X6rsDbBFaB",merger of disney and fox,AGAINST,merger of sony and fox,AGAINST,0.8712500000000001,True
+"@RealJamesWoods @Twitter @TwitterSupport Have you been Shadow Banned?
+#ShadowBanned 
+#MeToo https://t.co/R8PZmEiDI0",metoo movement,FAVOR,shadow banning,AGAINST,0.5275000000000002,False
+"Disney In Talks To Acquire 21st Century Fox, now stalled
+https://t.co/0EAxgXEIKU
+#Disney #Fox #xmen #FantasticFour #StarWars #staygeeky",merger of disney and fox,AGAINST,disney,FAVOR,0.793,False
+https://t.co/ip63hA3uPr via @Verge #Disney #Fox #talks #Resume #acquisition #active #news #movies #momentum #storyâ¦ https://t.co/AB6VraPDOw,merger of disney and fox,FAVOR,fox,AGAINST,0.8535,False
+"@FreeNewYorkNow @andrewcuomostan @NYGovCuomo Sweeden has a population of 10 mil spread across thousand of sq miles. They are only just coming out of winter, so restrictive movements naturally. Not very good example. Unlike South Korea, who thanks to lockdown, swift action , and testing, have eradicated the virus.",lockdown in new york state,FAVOR,south korea,FAVOR,0.48125,True
+"RT @RJAndrews8: 100,000 small businesses permanently closed in NY,says Cuomo. Unconstitutional Corona virus lockdowns + total lack of law &amp;É",lockdown in new york state,FAVOR,lockdowns,AGAINST,0.74275,False
+"#RadhaRavi takes sly digs at #MeToo movement
+https://t.co/K43b3bj9L8 https://t.co/Tg8uWigwHS",metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+No; gays should NOT have the right to marry because homosexuality is immoral and just not right.,gay rights,AGAINST,marriage rights,AGAINST,0.6655,True
+To each their own as a personal belief I have nothing against those that subscribe to creationism but feel strongly that it does not belong in schools. There is no theory of creation it is not even a hypothesis it is a belief or faith. Given the current state of education I dont think america can afford to put faith in schools.,creationism,AGAINST,creationism,AGAINST,1.0,True
+"@CNN So now 8 states with smart governors on lockdown  ( CA, WA, OR, IL, NY, NM, ID, RI  ) but for states not on lockdown their hospitals will become overwhelmed  while #trump earned 6th deferment on #Covid19 https://t.co/C9hqkIo8w2",lockdown in new york state,FAVOR,trump,FAVOR,0.756,True
+RT @PolitiBunny: TISSUE? Blue-check journo covering NY lockdown protest tweets all the ÔBOO-HOOSÕ because they werenÕt nice to him (watch)É,lockdown in new york state,NONE,protest,FAVOR,0.8624999999999999,False
+Anonymous posts weaken #MeToo https://t.co/hRCjZKQdBN https://t.co/SltaDEVPNC,metoo movement,AGAINST,metoo movement,FAVOR,1.0,False
+"@JohnSmi94424885 @_bel_chan_ @bibi_miChichi @SolaofDantooine @NYGovCuomo Actually the government did not have a choice to not lockdown. Wuhan is a big transportation center in China, if they donÕt lockdown Wuhan, the virus would spread out much quicker and wider than it did.",lockdown in new york state,FAVOR,lockdown,AGAINST,0.7522500000000001,False
+"@Darth_Brevity Bet it's hard to get your meds during @NYGovCuomo's #lockdown?
+
+Keep your HIV+ to your
+sad Long Island town!
+
+No one cares what pissy little twinks like you think.
+#domesticviolence
+#blocked https://t.co/RKWnwaqwXd",lockdown in new york state,AGAINST,new york lockdown,FAVOR,0.9520000000000001,False
+"@NYGovCuomo reopening immediately , if lock down of course no mask no meat no food , no supplies , who going work make mask for you if lockdown ? Mask can make at home by a sock of 2 cut https://t.co/6kNsqTCwkj",lockdown in new york state,AGAINST,reopening immediately,AGAINST,0.71525,True
+"@briantylercohen News &amp; media want to move on from Kavanaugh to midterms; letâs not forget when voting, âViolence against Women is a Menâs Issueâ (Katz) &amp; potus Trump redirects to being about white privileged men as victims over sexual violence. #metooâ  â â #ford #stahl #60minutes #morningjoe https://t.co/5YQFudSLV1",metoo movement,NONE,kavanaugh,AGAINST,0.6645000000000001,False
+Melania Trump Says She Supports Men Against #MeToo Allegations https://t.co/3LhmpNU5h6 #metoo #melaniatrump https://t.co/rd6Gi2atvj,metoo movement,FAVOR,metoo,FAVOR,0.8815000000000001,True
+"""Disney fired Kermit the Frog muppeteer over 'repeated unacceptable business conduct'"" via FOX NEWS #timbeta #betaajudabeta #timbetalab",merger of disney and fox,NONE,disney fired kermit the frog muppeteer over repeated unacceptable business conduct,FAVOR,0.567,False
+"Now moving from summer season to........ Life, too moves from...  #climate #weatherchange #rain #forecast #wind #SemST",climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+@leoduckbill @ASlavitt @notUnitePink So the world is going to lock down forever? BTW New York is finding 60% of new cases are people staying at home.,lockdown in new york state,AGAINST,lockdown forever,FAVOR,0.68,False
+"@NYGovCuomo Keeping the entire NYS in a lockdown and give a press conference every day with updates (zero,nada and skata)is not that hard and you donÕt need to be a https://t.co/zEp3sOQ100 have a specific plan to reopen the economy including a specific days thatÕs what true leadership is.",lockdown in new york state,FAVOR,new york state,FAVOR,0.8397499999999999,True
+"Growing concern of Pacific Islanders to adapt to sea level rise, increasing storminess; want to avoid becoming CC refugees #SemST",climate change is a concern,FAVOR,sea level rise,AGAINST,0.6982499999999999,False
+The chess match between Disney &amp; Comcast for Fox assets just took an interesting turn as Comcast bid 20% more for Sâ¦ https://t.co/urkNLCWsHd,merger of disney and fox,AGAINST,fox,FAVOR,0.8142499999999999,False
+Kavanaugh when one of yâallâs #MeToo related cases comes before the Supreme Court https://t.co/FXLufHhmmL,metoo movement,FAVOR,#metoo,AGAINST,0.96975,False
+Murdoch could have bought Netflix for a relatively cheap price in 2011; instead both Fox and Disney began supplying content to Netflix #LT,merger of disney and fox,NONE,netflix,FAVOR,0.7170000000000001,False
+RT @RapidBlaZeD: So excited to get back to the gym. The  coronavirus lockdown in upstate NY has been out of control because of downstate NYÉ,lockdown in new york state,AGAINST,coronavirus lockdown in upstate NY,FAVOR,0.8244999999999999,False
+"Commercial real estate is taking a #coronavirus hit.
+
+#JPMorgan expects toÊkeep offices half fullÊafter lockdowns end and for  the ""foreseeable future.""  
+
+#Citi is considering leasing offices in New Jersey andÊthe New York suburbsÊof Westchester County and Long Island.",lockdown in new york state,NONE,coronavirus,AGAINST,0.7120000000000001,False
+#Mission:#Climate @ home > Purchase renewable power from your utility (by @AveKathleen) #Tip #ImpactIsReal #SemST,climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+"@MarketJane @JoeBorelliNYC @NYGovCuomo Same here in CA, esp LA. WeÕre a major Òindependent contractual workerÓ city, those jobs still lockdown. I have friends in absolute panic cuz itÕs so backed up no idea if theyÕre even Approved for assistance. They canÕt get anybody phone, web, email, in person. Nothing. Crickets.",lockdown in new york state,AGAINST,coronavirus,FAVOR,0.7617499999999999,False
+#Mission:#Climate @ home > Move your thermostat down 2C in winter and up 2C in summer #Tip #DoYourPart #SemST,climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+Disney may have to raise its game if it wants to keep Fox's entertainment assets away from Comcast https://t.co/7P1h6rwNsb @jennifersaba,merger of disney and fox,AGAINST,merger,AGAINST,0.79675,True
+"Fox's takeover of Sky is dealt a blow by the U.K., just after it agreed to sell a chunk of assets to Disney https://t.co/BJ8eUNFrya",merger of disney and fox,NONE,sky,AGAINST,0.81375,False
+"exactly, eharmony is required to provide matches to african-american people too, but, what if the owners dont want to? should they have that right? no!so why should they have the right to descriminate against anyone?",gay rights,FAVOR,gay rights,AGAINST,1.0,False
+"#MeToo has ruffled feathers at various levels. While some offenders have issued apologies, some claim the charges are fabricated. Does this point fingers at the relevance of the movement itself? @MasalaBai @priyagupta999 @renukash @ThePikaro #ProfSamitaSen's take. https://t.co/tKQjZXuoHt",metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+"Teaching creationism is akin to child-abuse. This view is put forward by Richard Dawkins, a prominent opponent of teaching creationism in schools.
+",creationism,AGAINST,creationism,FAVOR,1.0,False
+"#MeToo  empowered by the Universal Mothers love proudly say never again   https://t.co/YYMrQsXf3u Love is the Universal Glue - love all respect all embrace all disarm all free all     https://t.co/9VYrVxGF9m Forever Yours Forever Free  - Free, Empowered and Unchained https://t.co/Ila2VgSvg2",metoo movement,FAVOR,#metoo movement,AGAINST,0.96975,False
+"File your #MeToo complaints with us, says Delhi Commission for Women
+to read more go on
+https://t.co/z2ERqoLSW5 https://t.co/4WetBS16JC",metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+"This is exactly why fox shouldnât sell itâs characters to Disney.
+It might not make as big as #StarWars ,butâ¦ https://t.co/11KThKk4xP",merger of disney and fox,AGAINST,fox and the other studios,AGAINST,0.8105000000000001,True
+"'Feminist writer and comedian Kate Smurthwaite responded to those concerns, saying it is statistically more likely to be struck by lightning than be victimised by the Me Too campaign.' :-) 
+
+#MeToo at the #FiLiA conference, as is @Cruella1 
+
+https://t.co/WoZxLYT5Zx https://t.co/H8afCSXCq1",metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+Pay it forward. Please help someone become a Dental Assistant #EducateAllGirls #EducationForAll #educacion #EducationIsGREAT #learning #learningtogether #MeToo #dental #dentistry https://t.co/GwiaWuHRIv,metoo movement,FAVOR,pay it forward,FAVOR,0.49449999999999994,True
+"@wilfredchan It remains a fact that when we in San Francisco were told to start sheltering, planning for lockdown by our leaders, New Yorkers  were told to go to bars and that we were silly. The New York death rate is 49x higher than San Francisco.",lockdown in new york state,FAVOR,lockdown,FAVOR,0.8380000000000001,True
+"@Harry_Currall @benshapiro Actually they said millions would die WITH a lockdown.  That was the official IMHE position that they all relied on, and it was completely false.
+
+The truth is that hundreds of thousands already had it with very low mortality (see USC, Stanford and New York surveys)",lockdown in new york state,FAVOR,lockdown,FAVOR,0.9027499999999999,True
+BREAKING: @Disney is progressing toward that rumored acquisition of @FoxHomeEnt that would result in the Fantasticâ¦ https://t.co/KUL0Rs3W3A,merger of disney and fox,FAVOR,disney,FAVOR,0.7250000000000001,True
+ugh someone just asked me what disney scene made me cry the most and I can't decide between The Fox and the Hound wâ¦ https://t.co/FV7z9dILY7,merger of disney and fox,NONE,disney,FAVOR,0.7537499999999999,False
+New York turns away further COVID-19 help from Christian physicians. I guess theyÕre fine.  Time to #endthelockdown #OPENAMERICANOW https://t.co/KMvDBDdtfp,lockdown in new york state,AGAINST,lockdown,AGAINST,0.7522500000000001,True
+"Nothing better than an inspiring, intellectual and honest conversation about feminism, inclusion, representation and the responsibility of pop culture in the post-#MeToo era with the all the female showrunners of @TheCW and the #Shethority women of #DCTV #SeeHer https://t.co/fpd7wo7qKl",metoo movement,FAVOR,representation of women,FAVOR,0.7620000000000001,True
+#MeToo: Salman Khanâs ex-girlfriend Somy Ali shares her story after being raped at 14 https://t.co/fSccRS7yc7 https://t.co/U2uGYWft4A,metoo movement,AGAINST,#metoo,FAVOR,0.8744999999999999,False
+ð­ð RT @ComicBookNOW: FOX reportedly wants to make that deal with DISNEY! X-MEN in the MCU is now closer than ever:â¦ https://t.co/kmxlkWV1ME,merger of disney and fox,FAVOR,marvel,AGAINST,0.7417500000000001,False
+"""If AT&amp;T is allowed to buy Time Warner, Comcast may try to top Disney's bid for Fox"" Why the AT&amp;T-Time Warner scrutâ¦ https://t.co/XtTHQYNYbB",merger of disney and fox,AGAINST,merger of at&t and time warner,AGAINST,0.7877500000000001,True
+Other ways to heal: when you canât tell your #MeTooÂ story https://t.co/P88wKOwfdn https://t.co/fYfJC17Y24,metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+"RT @AlexGiaimo: If you have the ability to leave for suburbia you should. NYC lockdown is looming. GTFO if you can. Also, who would voluntaÉ",lockdown in new york state,FAVOR,nyc lockdown,FAVOR,0.9082500000000001,True
+"Comcast is reportedly interested in the same 21st Century Fox assets as Disney. https://t.co/QXXyfNWyxx
+
+Video of Bâ¦ https://t.co/OFNcQ1g6k6",merger of disney and fox,AGAINST,merger,AGAINST,0.79675,True
+Disney's Acquisition Of Fox Inches Toward The Finish Line; A Deal Could Happen Before Christmas https://t.co/ruR2OVJr26,merger of disney and fox,FAVOR,disney,AGAINST,0.7537499999999999,False
+"Donât be afraid to speak out, no matter how long it takes. #metoo https://t.co/l8EnriLIGS",metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+BSP leader's son waving gun at Delhi hotel. #metoo https://t.co/G1iQaDSamS,metoo movement,NONE,metoo movement,FAVOR,1.0,False
+"I read a tweet about the Disney / Fox merger, 
+
+""Disney listens, takes chances and seems to care.""
+
+I honestly don'â¦ https://t.co/tBpldV3qNl",merger of disney and fox,NONE,fox merger,AGAINST,0.8735,False
+#Comcast has approached 21st Century Fox and is interested in acquiring the same set of assets that #Disney approacâ¦ https://t.co/79OE4o3ix2,merger of disney and fox,AGAINST,comcast,AGAINST,0.7687499999999999,True
+"We're now in Ngurudi at the Catholic university of Malawi 
+Demanding safe spaces for women and girls!!!
+âð
+#NoToHostileWorkenvironment 
+#16daysofactivism 
+#MeToo 
+@unwomenafrica @almasararu @HabibaRezwana @egisa_org @ShutItDownMw @UfuluwangaMW https://t.co/wmtn2Yv11T",metoo movement,FAVOR,safe spaces for women and girls,AGAINST,0.48699999999999993,False
+"Am not a Catholic, but the pope is spot on when it comes climate change & protecting the amazon forest. #SemST",climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+Disney acquires most of what you love about Fox for $52 billion in mega-deal https://t.co/gObVJJnMsj https://t.co/PsK9nh5Grh,merger of disney and fox,FAVOR,fox news,FAVOR,0.7150000000000001,True
+"@GautamDesiraju Rightly said @GautamDesiraju  #MeToo is happening for good of better #Science.Had personally been involved in pointed out few during my #PhD days.Sadly in India esp. academia, the predators are usually their supervisors or their related so-called boss. 
+#PhdChat #MeTooIndia https://t.co/KyiXztQB4k",metoo movement,FAVOR,#metoo movement,AGAINST,0.96975,False
+"This is how we all women at least should have been during the #metoo movement, but perfect world doesn't exist n some women decide to remain patriarch slaves. https://t.co/ipRiIvc56U",metoo movement,FAVOR,#metoo,FAVOR,0.8744999999999999,True
+"So unless anyone she was exposed to was also on a controlled lockdown, this thing could be running rampant through Manhattan as we speak. #COVID19 #coronavirus #covid #NYC https://t.co/CZZYqtUaH2",lockdown in new york state,FAVOR,coronavirus,FAVOR,0.501,True
+that only says whether gay sex is usefull for procreation - nothing about its morality,gay rights,FAVOR,gay sex,AGAINST,0.78875,False
+"What current issue should we be talking about more? 
+#empowermentensemble #metoo #womensmarch #girlpower #womensupportingwomen #females #empoweringwomen #empowerment #keepshowingup #togetherwerise #shareyourstory #empowermentinthewild https://t.co/BM1eTlOqna",metoo movement,AGAINST,metoo,FAVOR,0.8815000000000001,False
+"RT @NikolovScience: My analysis suggests that, if we must lock down places to limit the #COVID19 spread, these must be NY City and Newark NÉ",lockdown in new york state,FAVOR,new york,FAVOR,0.9520000000000001,True
+"Your move, Bob Iger: The Disney CEO's takeover of 21st Century Fox is being challenged by a bidding war for Skyâ¦ https://t.co/s4AhyDrzdP",merger of disney and fox,AGAINST,sky,FAVOR,0.53975,False
+"@Manekagandhibjp @ncw is thr any law to protect men?  Who will pay for this loss? #womenempowerment going in #wrongdirection 
+#MeToo for #MenToo 
+@manidynamic @sifchandigarh @anuradha_jaidka @jyotitiwari05 @InsaafNGO @vaastavngo @SIFKtka https://t.co/tkTzXMkx7V",metoo movement,FAVOR,women empowerment,FAVOR,0.682,True
+"Unswayed by Disney deal, Comcast still thinks it can buy 21st Century Fox https://t.co/EWkCUCojq7 https://t.co/kLvbpNty8F",merger of disney and fox,AGAINST,merger of disney and fox,FAVOR,1.0,False
+"$FOXA Chatter of potential Comcast bid for Fox Assets, setting up competition for Disney bid https://t.co/tbziXKQ3Cc",merger of disney and fox,AGAINST,merger of fox and disney,AGAINST,0.9937500000000001,True
+"#metoo only when politically convenient.  #Feminists around the world would march for a woman who was not hired because she refuses to take off the #burqa at work, but they don't lift a finger for ASIA BIBI. #AsiaBibiCase #FreeAsiaBibi https://t.co/2btwpvdhQM",metoo movement,AGAINST,asia bibi case,AGAINST,0.5457500000000001,True
+"after suicidal  effort of de Monetization in Global recession period,which eaten 2% GDP growth rate and crashed both organized and unorganized  sectors. Insult to injury is GST which again drastically decreased the Income  of Govt already. Disaster is lockdown only NYAY can save https://t.co/rHyDL0KI6B",lockdown in new york state,AGAINST,india's economy,AGAINST,0.5942500000000001,True
+You ask is being gay a sin.One sin is not as bad as another sin and we all have sinned.You without sin cast the frist stone.JESUS LOVES US ALL. HE DIED FOR YOU.COME TO JESUS today.COME,gay rights,AGAINST,gay rights,FAVOR,1.0,False
+"@GovMurphy I hope what I just read isnÕt true. Another 30 days lockdown. The longer you keep this state closed, the longer I believe you are doing this for politics. At least Cuomo has a plan with actual dates. You are a disgrace.",lockdown in new york state,FAVOR,reopening,FAVOR,0.79625,True
+#MeToo inspires wave of old misconduct reports to colleges https://t.co/i9evlAvqrl https://t.co/9zGJBAfnDl,metoo movement,FAVOR,#metoo movement,FAVOR,0.96975,True
+The media merger wars are on. Next up: Comcastâs bid to undercut Disneyâs purchase of Fox: https://t.co/FflS8N02XY,merger of disney and fox,AGAINST,merger,AGAINST,0.79675,True
+Zen Moment of the Day. #notilter #quarantine #isolation #breathe #lockdown #socialdistancing #newyork #ny #upstateny #besafe #stayhome #stayhomesavelives #hudsonvalley #hudsonvalleyny #hudsonny #columbiacountynyÉ https://t.co/60Z2sMWezR,lockdown in new york state,FAVOR,social distancing,AGAINST,0.5599999999999999,False
+"I am a fundamentalist Christian, I take the Bible as it is written. I also have know many gays and don't think homosexually is a sin. Jesus did not judge gays and taught that we should judge anyone. It is disturbing to me that people get turned off Christianity by a few vocal hypocrites.",gay rights,FAVOR,christianity,FAVOR,0.8022500000000001,True
+"Rules for you, but not for us: DeBlasio appoints wife ÔequityÕ czar &amp; strolls in park while New York City remains on lockdown Ñ RT USA News https://t.co/5iytv9kjzR",lockdown in new york state,AGAINST,new york,AGAINST,0.8094999999999999,True
+"Interesting tidbit: before Disney came calling, Verizon kicked the tires on buying Fox assets. Which begs the questâ¦ https://t.co/f4Joxo7X48",merger of disney and fox,NONE,merger of fox and disney,AGAINST,0.9937500000000001,False
+Climate deniers is a term used to silence those pointing out the hypocrisy in the fanatical zeal on  #climatetruth #SemST,climate change is a concern,AGAINST,climate change is a hoax,AGAINST,0.7087499999999999,True
+âSharing what happened to me helped other people share their stories about sexual violenceâ @FootstepsTI talks about how so many people have come forward after she shared her experience. #metoo #timesup https://t.co/mFYjSWrSF9,metoo movement,FAVOR,metoo movement,FAVOR,1.0,True
+"Is This The Beginning Of The End Of #MeToo? As Author Of 'Sh*tty Media Men' List Gets Sued, Sexual Assault Charge Against Weinstein Dropped Over Accuser's Credibility - https://t.co/ka43RSH2Zk #HarveyWeinstein #ShittyMediaMen https://t.co/kB4tjHEtVf",metoo movement,AGAINST,#metoo movement,FAVOR,0.96975,False
+Why they replaced Fox Kids with Jetix and now Disney XD I will never understand... kids today are suffering man,merger of disney and fox,NONE,disney xd,AGAINST,0.711,False
+The Disney Acquisition of Fox May Not Be a Done Deal as Comcast Might Top Disney's Offer https://t.co/mUScKcY5xu https://t.co/hX4dg4Ow7E,merger of disney and fox,AGAINST,disney acquisition,AGAINST,0.8330000000000001,True
+"@joepalojoe @gatewaypundit The guy was mayor of NewYork City,  now a declared  Sanctuary  City, the liberals  of my state have fought  for this, rights for illegal immigrants,  defended  criminals  over law enforcement,  wonder why we are in lockdown",lockdown in new york state,AGAINST,sanctuary city,AGAINST,0.554,True
+"Woman Rightly Thrashes Shameless Bank Manager in Davangere,  Karnataka's Who Was Allegedly Asking Sexual Favours to Approve her Loan 
+
+#MeToo
+
+ https://t.co/YjwnxuSaHw",metoo movement,NONE,sexual favours to approve loan,FAVOR,0.41300000000000003,False
+"Women in the @INCAssam is not safe.Again #MeToo in #Assam.#MeTooIndia ,#MeTooIndia .@suranjanbjp,@hiteshkalita,@NikiBorah,@DBarkataki,#MeTooInAssam https://t.co/6uMx4oNnIs",metoo movement,NONE,assam,AGAINST,0.5477500000000002,False
+"Most support #MeToo movement, false accusations a big concern:Â Survey https://t.co/5Q1wiz87lO https://t.co/dwybTNtGAy",metoo movement,NONE,metoo movement,AGAINST,1.0,False
+"@zaraali2019 @AqrabaFatima He mentioned New York is following the smart lockdown plan, I think even its not still they need to, they have a worse condition ever and they tried all the options already.",lockdown in new york state,FAVOR,smart lockdown,FAVOR,0.6465000000000001,True
+Glad @ActuallyNPH spoke up.  Happens to guys too.  #MeToo https://t.co/2UK3nIQT85,metoo movement,AGAINST,metoo movement,FAVOR,1.0,False
+"@tonywebbnyc @ScottGottliebMD @NYGovCuomo Asymptomatic spreaders most likely.  People still go out occasionally and then there are essential workers; the city isnÕt on a hard, enforced lockdown.",lockdown in new york state,FAVOR,covid-19,AGAINST,0.53975,False
+#MeToo: Victim of sexual harassment being punished for standing againstÂ it https://t.co/r8vaCHgCEn https://t.co/tMvGGNNCEv,metoo movement,FAVOR,#metoo movement,FAVOR,0.96975,True
+"""Gay adoption is wrong"". The Daily Free Press. April 1st, 2004
+",gay rights,AGAINST,gay adoption,AGAINST,0.7140000000000002,True
+@RBaroff427 @DFSDiez @crclngthdrn 21st century fox&gt; which is now going to be a Disney owned property... it fits theâ¦ https://t.co/6w9XIAOhU8,merger of disney and fox,NONE,gay rights,FAVOR,0.3745000000000001,False
+"@rcknrollernurse @steph93065 Keeps Cuomo on all MSM channels as he campaigns to replace Biden as Dem candidate. Cuomo, MSM fav should be know as Mr Incompetent Disregarded NY Report to prepare, killed seniors, lockdown late. MSM avoids all that",lockdown in new york state,FAVOR,new york state,AGAINST,0.91425,False
+"#MeToo movement: Kwan's co-founder Sheetal Talwar sends legal notice to other company directors 
+
+https://t.co/75tvTijTYn https://t.co/AvMspcngex",metoo movement,NONE,metoo movement,AGAINST,1.0,False
+"Itâs about time everyone learns to treat women with respect and dignity. 
+
+Iâm glad the space for those who don't, is closing. The truth needs to be told loud and clear in order to bring about change. 
+
+#MeToo #BelieveWomen #MeeTooIndia #Respect #TimesUp #change #SundayMotivation https://t.co/BZjWkIOiux",metoo movement,NONE,#metoo,FAVOR,0.96975,False
+Ashish Bisht Confirms Meeting with Vicky Sidana in Kritika Sharma's #MeToo Case â metooÂ movement https://t.co/JQRWDhWUfP https://t.co/i71XSMMOEa,metoo movement,NONE,metoo movement,FAVOR,1.0,False
+"Yes! And 66% in NY were those who were shut down in their homes.
+This lockdown in not natural and was a fraud on the American public! 
+#Fraud #Hoax #complictmedia  The #FakeNewsMedia spreads false information and blames Trump. That's all they are good for. https://t.co/tCYq541kq1",lockdown in new york state,AGAINST,lockdown,FAVOR,0.7522500000000001,False
+"$VZ, $CMCSA, $FOXA, $DIS 21st Century Fox Beset With Suitors As Comcast, Verizon Said To Make Approaches - https://t.co/A5OOAgc6EZ",merger of disney and fox,AGAINST,21st century fox,FAVOR,0.78125,False
+"""Disney will be the biggest, most powerful company Hollywood has ever seen"" - Fox President Peter Rice ... hear thaâ¦ https://t.co/5giTLLG7OQ",merger of disney and fox,NONE,disney,FAVOR,0.7687499999999999,False
+My take on #Metoo #metooindia  Movement https://t.co/F2GjhFJHn0,metoo movement,FAVOR,metoo movement,AGAINST,1.0,False
+"A 22-year-old identified as a Missouri State University student has been charged with raping a woman after she attended a #MeToo rally in Springfield, Missouri. https://t.co/iW4VibjVQE https://t.co/eduI0XZadI",metoo movement,NONE,me too movement,FAVOR,0.96975,False
+"I'm really wondering if there will an even faster exodus from strict lockdown states such as Illinois, CA and New York to states that are opening up, such as my state of South Carolina :)",lockdown in new york state,NONE,lockdown,FAVOR,0.7522500000000001,False
+Disney Set To Seal $60bn 21st Century Fox Takeover https://t.co/wHf4jRjKN4 #Disney #Fox #Hollywood #US #NewYorkâ¦ https://t.co/nGkcPhg7ZY,merger of disney and fox,FAVOR,disney,FAVOR,0.7850000000000001,True
+End it: NYC protests have exposed a truth Gov. Cuomo and Mayor de Blasio have missed; this lockdown is over #SmartNews  https://t.co/9oOeAdw897,lockdown in new york state,AGAINST,lockdown,AGAINST,0.7522500000000001,True
+I liked a @YouTube video https://t.co/qJBwOmm89A BREAKING NEWS Disney Buys FOX Welcome Home X-Men &amp; Fantastic Four,merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+"Every child should be raised by heterosexual parents. Gay couples shouldn't adopt, they are not parents.",gay rights,AGAINST,gay adoption,AGAINST,0.7140000000000002,True
+"@kaybella_nyc @alliefb @CNN Back then, it was a wild idea of mine to lock down the entire world.
+Right now almost the entire Earth is in lockdown. 
+2 weeks it's was a simple guess, I'm no scientist, but it's turned out to be that a determined period it's the best way to keep this in control.",lockdown in new york state,FAVOR,lockdown,AGAINST,0.7522500000000001,False
+@CrackerHippie @juicy_moose @chick_in_kiev Do you even read stats? The US will not reach the required 70% of herd immunity until there's a vaccine. That's 70% of the POPULATION. Boston is at 9.9%.  New York at 19.9%. Even Wuhan who had lockdowns and mandatory masking are only at 10%. Wear a God damn mask.,lockdown in new york state,NONE,lockdowns,FAVOR,0.74275,False
+"@sarahlazare @adamjohnsonNYC Most of the people vocally demanding an end to lockdown aren't doing so for reasons that these programs would resolve, though. They're either capitalists trying to restart their money engines or ideologues trying to avert some kind of imagined communist apocalypse.",lockdown in new york state,AGAINST,protests,AGAINST,0.8507500000000001,True
+"I just have to respond to one of your last statements:""Until you can show me what human right is being denied, I don't know where else to go with this""The right to life, LIBERTY, and the PURSUIT OF HAPPINESS. It's in the Declaration of Independence. The denial of gay marriage is violating two basic human rights.",gay rights,FAVOR,gay rights,AGAINST,1.0,False
+"#Metoo Allegation: Watch Ambarish Reaction on Shruthi Hariharan After Counseling at KFCC
+
+Video Link: https://t.co/RS3sgStYgD
+
+#MetooAllegation #Ambarishreaction #ShruthiHariharanmetoo #CounselingatKFCC #Nation #India #LatestNews #TrendingNews #NewsTracker #TV9Live #TV9Kannada https://t.co/S2azIulFPG",metoo movement,NONE,#metoo,AGAINST,0.96975,False
+"IT'S OFFICIAL: Disney will buy 21st Century Fox film and TV assets for $52.4 billion (FOXA, DIS) https://t.co/CW7QzdVYtC",merger of disney and fox,FAVOR,merger,AGAINST,0.79675,False
+"Well, ain't that a #bitch?
+https://t.co/4MuuCPGqiU
+#metoo https://t.co/aGxD9WrSjj",metoo movement,NONE,metoo movement,AGAINST,1.0,False
+"#RupertMurdoch, who singlehandedly ruined political culture in three nations; selling most of what he owns to Disney, except for Fox News.",merger of disney and fox,FAVOR,fox news,FAVOR,0.6174999999999999,True
+"I find it non-coincidental that Fox announces their removal of content from Netflix, now Disney buyout rumors. Makes sense. $foxa $dis $nflx",merger of disney and fox,FAVOR,fox news,AGAINST,0.64,False
+" @cjane87 News from the western US may as well not exist. 
+
+NYC drove the length of the lockdown and any state that opened ""early"" was excoriated.
+
+I think it's problem that needs to be addressed.",lockdown in new york state,NONE,new york,AGAINST,0.91775,False
+Disney in (stalled) talks to buy most of Fox's assets https://t.co/I8X0sJWPmp #Disney #Fox #media,merger of disney and fox,FAVOR,merger of disney and fox,AGAINST,1.0,False
+"Comcast's bid to acquire Sky throws a wrench into Disney's plans to buy much of Fox, and creates a lot of questionâ¦ https://t.co/0ePPtKLOlL",merger of disney and fox,AGAINST,disney,FAVOR,0.7907500000000001,False
+"In 1992 close to 30 women were elected to Congress. The #MeToo movement in 2018 has produced a record number of women running for public office. Learn more:  
+https://t.co/hoDIZ3RK82
+#MondayThoughts #USCMPA #WomenLeaders18 #MondayMotivation https://t.co/lCqEc0kwhI",metoo movement,FAVOR,women in politics,FAVOR,0.5837500000000001,True
+"You're right. I am ""pretty"" young. 16. I will take a look at the   science   behind it. Thank you.",gay rights,AGAINST,climate change,FAVOR,0.5277500000000002,False
+"BBC News - Walt Disney buys Murdoch's Fox for $52bn https://t.co/kmyagrRljI
+Look out! Liberal PC Disney buys Fox ouâ¦ https://t.co/whZXJAJ3ed",merger of disney and fox,FAVOR,disney,AGAINST,0.7687499999999999,False
+Walt Disney confirms deal to buy most of 21st Century Fox's assets - Walt Disney Co. (NYSE:DIS) has confirmed thatâ¦ https://t.co/wBOwTioKCS,merger of disney and fox,FAVOR,merger,AGAINST,0.79675,False
+NWMI- MJ Akbar must step down and submit to investigation of sexual harassment chargesÂ #MeToo https://t.co/43bq5TUQor https://t.co/4VUUu8WOtY,metoo movement,NONE,me too movement,AGAINST,0.7989999999999999,False
+When you write an article about #MeToo and these misogynistic monsters attack you for destroying family values and being a deviant! https://t.co/6QMr2TlPwh,metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+Tonight - Academy of Science talk Tech solutions for climate change with Prof. Barry Brook #cantorandballtowers #Canberra #SemST,climate change is a concern,FAVOR,climate change,FAVOR,0.8430000000000001,True
+@toddeherman Disney is not purchasing Fox News.  Disney has held talks with 21st Century Fox about buying most of Fâ¦ https://t.co/J0omYH13hl,merger of disney and fox,FAVOR,disney,AGAINST,0.7250000000000001,False
+"@TuckFru43379333 @FoxNews He should order a lock down! What happened to 6 feet apart, no church, no funeral or youÕll be arrested. What does this have to do with Cuomo is governor.",lockdown in new york state,FAVOR,lockdown,FAVOR,0.7522500000000001,True
+"$DIS $FOXA:
+
+UPDATE: Fox (FOXA)-Disney (DIS) Deal is Said to be Coming this â¦:
+
+https://t.co/YHqCXp6NEC",merger of disney and fox,FAVOR,fox deal,FAVOR,0.9204999999999999,True
+"@Campbells Yesterday I had the tomato soup one, it was good but this one is better ... Exciting times under lockdown in New York ____",lockdown in new york state,NONE,coronavirus,FAVOR,0.783,False
+"This pretty sums up the #MeToo thingy nowadays.
+Mannnn its getting scarier day by day. Btw f*ck P.C. #PoliticalCorrectness https://t.co/NTyDcq4O3T",metoo movement,AGAINST,metoo movement,AGAINST,1.0,True
+#Metoo accusers need 'hard evidence'... https://t.co/x9KaWBTFFH https://t.co/wEoqQTiS6z,metoo movement,AGAINST,metoo movement,FAVOR,1.0,False
+"If you tweeted with excitement about a Fox/Disney merger, it's also important to tweet that the deal is dead.
+
+https://t.co/kAn2AgEIkk",merger of disney and fox,AGAINST,merger,AGAINST,0.79675,True
+"@StuartReidBooks @NYGovCuomo It took 19 day to start the process of the lockdown, so the State didnt go into shock and Crash",lockdown in new york state,FAVOR,lockdown,FAVOR,0.7522500000000001,True
+"The Walt Disney Company to Acquire Twenty-First Century Fox, Inc., After Spinoff of Certain Businesses, for $52.4 Bâ¦ https://t.co/XEqQaPAxvf",merger of disney and fox,FAVOR,merger of 21st century fox and disney,FAVOR,0.9282500000000001,True
+#Comcast Considers Reviving Pursuit of Fox After Higher Bid Was Rejected https://t.co/RUrQr31Gil $CMCSA $FOXA $DIS https://t.co/9YdE1SpHIJ,merger of disney and fox,AGAINST,merger of fox and comcast,FAVOR,0.922,False
+"@KenEmpie @MedioAlt @Tampa_Joe_813 @JoeBiden Ga has been open 4 weeks. They kept warning us, just wait, the numbers will go up. Guess what? They didnÕt. Even Cuomo said 66% of new hospitalization came from people in lockdown. Keep drinking your blue Koolaid. #VoterID #VoteRedToSaveAmerica2020",lockdown in new york state,AGAINST,reopening,AGAINST,0.5387500000000001,True
+Most   Americans   accept gays for who they are. Don't ever feel like a second class citizen because of a vocal few that choose to be intolerant of others. As for   gay marriage   the Constitution is on your side.,gay rights,FAVOR,gay marriage,FAVOR,0.7522500000000001,True
+"The #greatman @BarackObama met #greatman David Attenborough & change seems possible, attainable. Listen up! #Attenborobama #SemST",climate change is a concern,FAVOR,global warming,FAVOR,0.7032499999999999,True
+Brings a new dimension to the word hypocrisy. Any truth in the rumour that Disney is bidding for a takeover? https://t.co/yoYoU51TFS,merger of disney and fox,NONE,gay rights,FAVOR,0.59,False
+"@FredFredna @BarackObama NBC Disney fight 21st Century Fox for New ""Mansion"" Epic Movie Rights~ Kathy Griffin &amp; Johâ¦ https://t.co/lzGPoqWRsB",merger of disney and fox,NONE,new movie rights,AGAINST,0.7969999999999999,False
+RT @RustyMowery: @Arngrim my 1st book of choice for the NYC lockdown?!?!? Reading aloud to @4BarryAnderson https://t.co/3fKpuwA6e1,lockdown in new york state,FAVOR,covid-19,FAVOR,0.7585,True
+Disney to announce $60bn purchase of Fox on Thursday in  move that could extend Bob Iger's term as CEO and put Jameâ¦ https://t.co/Cur6nzzlIh,merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+Damn it. It finally happened. Early reports indicate that Disney has bought Fox. Details will be in the next video.,merger of disney and fox,FAVOR,merger of disney and fox,AGAINST,1.0,False
+#Mission:#Climate @ home > Run your dishwasher only if it's full. (by @gaiam) #Tip #ActOnClimate #SemST,climate change is a concern,FAVOR,run your dishwasher only if it is full,FAVOR,0.63475,True
+Disney's Expected Takeover Of Fox Makes It Less Likely Rupert Murdoch Will Get His Hands On Sky https://t.co/PTiWJlsGBr,merger of disney and fox,NONE,merger of disney and fox,FAVOR,1.0,False
+"@ptpete25 @AlexBerenson @Cernovich New York was late to lock down, then slow once they did... and have a high mortality rate. 
+
+CA locked down early and has a low morality rate. 
+
+No?",lockdown in new york state,FAVOR,lockdown,AGAINST,0.7522500000000001,False
+"#WebduniaCheck BJP MP Udit Raj shames #MeToo Campaign, calls the practice 'wrong' https://t.co/mLLWKGsXSd",metoo movement,AGAINST,me too movement,AGAINST,0.8000000000000002,True
+"Where the fuck do you get off calling me a sick freak for stating facts? I was responding directly to Tingtang2010 when he said ""yeah duh there is no ""other anamils"" that are fucking gay"". All I was saying is that there are animals that are gay.",gay rights,FAVOR,gay animals,AGAINST,0.7550000000000001,False
+#RobLiefeld Urges #Fox To Pass on #Disney #Buyout Offer I guess he feels it's not the happiest place on #earth https://t.co/LbsmPYHLRg,merger of disney and fox,AGAINST,disney,AGAINST,0.7250000000000001,True
+"@di_m_ex Lately theyâve been taking a darker turn, reports of Disney Buying Fox Network. They rich as fuck Iï¸ want that Disney bread.",merger of disney and fox,NONE,disney,FAVOR,0.7250000000000001,False
+RedScareBot: Simple Malarkey RT gingerdr Global Warming/Climate Change all a HOAX. Communist agenda for control #sustainabil... #SemST,climate change is a concern,AGAINST,climate change,AGAINST,0.8430000000000001,True
+"Forget the #MeToo  b.s. 
+As @TuckerCarlson put it, it's now the
+
+#MeSioux movement.ððððð https://t.co/3Qe74Gs3gI",metoo movement,AGAINST,#metoo movement,FAVOR,0.96975,False
+"Nobody showed up at anti-lockdown protest in New York: report #SmartNews __Look at the asshole holding the sign saying the virus is a lie, but wearing goggles and a mask and scrubs. But itÕs a lie huh _______ just cannot fix stupid__ https://t.co/9aMcoK53iO",lockdown in new york state,FAVOR,lockdown,FAVOR,0.7522500000000001,True
+This #metoo brigade causes shit like this. That poor kid. https://t.co/0Kkg8iUnTS,metoo movement,AGAINST,#metoo,FAVOR,0.96975,False
+"A Year Into #MeToo, Public Worried About False Allegations https://t.co/4YMhwrU6yV via @morningconsult https://t.co/WvFZBrgyCF",metoo movement,FAVOR,me too movement,FAVOR,0.96975,True
+"The Walt Disney Company To Acquire Twenty-First Century Fox, Inc., After Spinoff Of Certain Businesses, For $52.4 Bâ¦ https://t.co/nAJrc7Dxxc",merger of disney and fox,FAVOR,merger of disney and fox,FAVOR,1.0,True
+KEEP LOCKDOWN GOING...ITS NOT SAFE TO REOPEN ECONOMY...People should NOT Be Allowed Out of their Homes...#msnbc #foxnews #nytimes #cnn #wsj #cnbc #politico #huffpost #drudge #bbc #gop #npr #dailykos #thehill #wapo #nbc #cbs #ap #slate #aarp #cdc #nyclockdown #fauci #covid19,lockdown in new york state,FAVOR,lockdown,FAVOR,0.7522500000000001,True
+@Hosscaptn1 @jessebyrnes @PoliticsReid no... Because it is happening in particular hotspots...  New York  Has many county's on lock down along with the entire state of California except for essential activities. Florida beaches have been closed.  Focused and specific  Lock down...,lockdown in new york state,FAVOR,lockdown,FAVOR,0.7522500000000001,True
+"How is covid-19 effecting the 'super rich'? Mitchell Moss, who studies urban policy and planning at NYU, said that shacking up with your significant other as a result of a lockdown could lead to unexpected consequences 1/2",lockdown in new york state,AGAINST,lockdown,AGAINST,0.97475,True
+"#FoodWorldOrder #Geopolitiks #endthelockdown: Rules for you, but not for us: DeBlasio appoints wife ÔequityÕ czar &amp; strolls in park while New York City remains on lockdown Ñ RT USA News https://t.co/mWDITxWhtB",lockdown in new york state,AGAINST,new york city,AGAINST,0.746,True
+Agreed. I personally think state governments should not be able to grant marriages and should only be able to grant civil unions to everyone. Marriages are too religious. The next best alternative is to allow gay marriage. But I agree that marriage does violate the constitution especially if religious reasons are used to bar certain people from entering marriages.,gay rights,FAVOR,gay rights,AGAINST,1.0,False
+"Join me this Saturday for show #75 on https://t.co/rEYGzWiliL
+@MakerParkRadio @FLAGSHIPBREWERY @downtownsinyc #covid19 #lockdown #radio #SaturdayMorning #podcast #streamingradio #NYC https://t.co/EpXSoBb6in",lockdown in new york state,NONE,new york,AGAINST,0.8397499999999999,False
+i'm a christian and our doctrines says that gay marriage is not permissible,gay rights,AGAINST,gay marriage,AGAINST,0.7522500000000001,True
+Really happy to see all the men on board with #MeToo but sometimes it's like https://t.co/TggZPHwDR8,metoo movement,AGAINST,metoo movement,FAVOR,1.0,False
+I like your non confrontational approach and your willingness to accept that people have the right to believe differently than you.,gay rights,FAVOR,creationism,FAVOR,0.52575,True
+"Singh Is Kinng sequel, not #MeToo, on Vipul Shah's mind? https://t.co/cA4gq3uhOC https://t.co/qVYiyLw2Ss",metoo movement,NONE,#MeToo movement,FAVOR,0.96975,False
+"Snyder leaves the DCEU after WB destroys his movie, Disney is going to buy Fox, Hollywood is full of maniacs and peâ¦ https://t.co/NKnXS8QPh1",merger of disney and fox,FAVOR,marvel,AGAINST,0.7687499999999999,False
+"20200512: CBC : This short film of London on lockdown will give you chills [""New York City filmmaker captured scenes from London, Ont. on a daily basis"" https://t.co/DSGKUDIo7h",lockdown in new york state,NONE,lockdown,AGAINST,0.7522500000000001,False
+"Comcast looks to acquire 21st Century Fox; Disney backs out
+https://t.co/gAZtqwxWcC
+#Disney #Comcast #Fox #TV #Newsâ¦ https://t.co/p9jvG4TjV6",merger of disney and fox,AGAINST,disney,AGAINST,0.7687499999999999,True
+"So Comcast might try to outbid Disney for their purchase of Fox.   That terrifies me, at least Disney stays in theâ¦ https://t.co/x5G5XCcHIB",merger of disney and fox,AGAINST,merger of disney and fox,FAVOR,1.0,False
+"RT @DecodedReality: If they lockdown NY, who will obey the lockdown after supplies run low? Martial law coming soon to a city near you. httÉ",lockdown in new york state,AGAINST,lockdown,AGAINST,0.7522500000000001,True
+"Today's Deccan Herald
+
+(Read the caption)
+
+#MeToo https://t.co/VGZPj1Y0yN",metoo movement,AGAINST,metoo movement,FAVOR,1.0,False
+"Comcast looks to acquire 21st Century Fox; Disney backs out
+https://t.co/B8c56ShIF5
+#Disney #Comcast #Fox #TV #Newsâ¦ https://t.co/RZ1fLKfWSd",merger of disney and fox,AGAINST,merger of fox and disney,FAVOR,0.9937500000000001,False
+.@quinn43 Thanks for the follow. Check out CCL for solutions. #solutions #citizensclimatelobby2015 #SemST,climate change is a concern,FAVOR,climate change,AGAINST,0.8430000000000001,False
+"In the past couple of weeks.
+
+â¢ We finally got the Infinity War trailer.
+
+â¢ Disney is about to buy FOX.
+
+â¢ The Justâ¦ https://t.co/DJvHCREfMB",merger of disney and fox,FAVOR,marvel,AGAINST,0.7417500000000001,False
+@45sRoad2 @UrbanTurk182 @NYGovCuomo How many people without underlying conditions have died in NYC? The numbers do not substantiate a total lockdown. The state can reopen with caution while still having high-risk patients and their caretakers in quarantine. Cuomo keeps moving the goalposts.,lockdown in new york state,AGAINST,lockdown,AGAINST,0.7522500000000001,True
+Untold Story of Chinmayi..! #EPVI #WeTooMen #MeTooIndia #MeToo #Chinmayi #Vairamuthu #GunasekaranMu #ThanthiTV #SexualPredatorVairamuthu #SreenivasanJain #DMK https://t.co/QW8eIYim6n,metoo movement,FAVOR,metoo,AGAINST,0.88175,False
