@@ -13,37 +13,33 @@
 \usepackage{listings}
 \usepackage{fancybox}
 \usepackage{tcolorbox}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows.meta, positioning, calc, backgrounds, fit, shadows}
+
+% Define colors for TikZ diagram
+\definecolor{primary}{RGB}{70, 130, 180}   % SteelBlue
+\definecolor{secondary}{RGB}{255, 140, 0}  % DarkOrange
+\definecolor{tertiary}{RGB}{34, 139, 34}   % ForestGreen
+\definecolor{neutral}{RGB}{240, 240, 240}  % LightGray
+\definecolor{accent}{RGB}{220, 20, 60}     % Crimson
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
 
 \begin{document}
 
-\title{Agentic Open-Target Stance Detection with Finetuned Local LLMs
+\title{Agentic Open-Target Stance Detection with Finetuned 
 \thanks{Identify applicable funding source here. If none, delete this.}
 }
 
-\author{\IEEEauthorblockN{Author One}
-\IEEEauthorblockA{\textit{Dept. of Computer Science} \\
-\textit{University Name}\\
-City, Country \\
-email@address}
-\and
-\IEEEauthorblockN{Author Two}
-\IEEEauthorblockA{\textit{Dept. of Computer Science} \\
-\textit{University Name}\\
-City, Country \\
-email@address}
-}
+
 
 \maketitle
 
 \section{Abstract}
 Open-Target Stance Detection (OTSD) presents a unique and significant challenge in natural language processing, requiring systems to identify targets and determine stances without predefined target lists. Unlike traditional stance detection, where targets are given, OTSD demands a higher level of semantic understanding to infer implicit targets from context. This paper presents a robust, privacy-preserving approach combining Parameter-Efficient Finetuning (PEFT) of local Large Language Models (LLMs) with a streamlined agentic workflow. We finetuned the Llama 3.1 8B model using Low-Rank Adaptation (LoRA) on a comprehensive combined dataset of VAST and TSE examples, enabling the model to jointly learn target extraction and stance classification. This finetuned model is integrated into a LangGraph-based agentic system featuring a three-stage pipeline: linguistic analysis, multi-hypothesis target generation, and stance classification. Our experimental results on diverse datasets demonstrate the effectiveness of this approach, achieving high target semantic similarity (up to 0.93) and competitive stance detection accuracy (up to 59.34\%) using locally hosted models. Furthermore, we introduce a novel evaluation protocol involving ground truth semantic expansion to rigorously assess target identification performance. The system effectively handles both explicit and implicit targets, validating the synergy between task-specific finetuning and agentic reasoning.
 
-\begin{IEEEkeywords}
-stance detection, target detection, agentic ai, langgraph, large language models, llama3, finetuning, LoRA, local models, natural language processing
-\end{IEEEkeywords}
+
 
 \section{Introduction}
 
@@ -91,10 +87,17 @@ To adapt the Llama 3.1 8B model for OTSD, we employed Parameter-Efficient Finetu
 We utilized the Unsloth library, which provides optimized kernels for Llama architectures, enabling 2x faster training and 60\% less memory usage compared to standard Hugging Face implementations. The training was performed on a single NVIDIA Tesla T4 GPU. To further reduce memory footprint, we employed 4-bit quantization using the BitsAndBytes library.
 
 \subsubsection{Dataset Construction}
-We constructed a unified training dataset by merging resources from established stance detection benchmarks. The dataset preparation process involved:
-
+We constructed a unified training dataset by merging resources from established stance detection benchmarks, specifically excluding any VAST or ChatGPT-generated data to ensure a rigorous zero-shot evaluation on those domains. The training set comprised examples from:
 \begin{itemize}
-    \item \textbf{Source Datasets}: Combined examples from TSE (Twitter Stance Extraction) and VAST datasets, providing coverage of both explicit and implicit target scenarios.
+    \item \textbf{COVID-19 Stance Dataset}: Domain-specific tweets about the pandemic.
+    \item \textbf{IBM-30k}: A large-scale dataset for argument quality and stance.
+    \item \textbf{P-Stance}: Political stance detection (Biden, Trump, Bernie).
+    \item \textbf{SemEval-2016}: The standard benchmark for stance detection targets.
+    \item \textbf{WTWT (Will-They-Won't-They)}: Financial and merger-related stance detection.
+\end{itemize}
+
+The dataset preparation process involved:
+\begin{itemize}
     \item \textbf{Data Preprocessing}: Applied text cleaning to remove common prefixes (e.g., "I am in favor of") from target annotations, ensuring consistent target formatting across examples.
     \item \textbf{Multi-Task Formatting}: Each training example was converted into two instruction-following pairs using the Alpaca format:
     \begin{enumerate}
@@ -130,12 +133,154 @@ This configuration resulted in only 41.9 million trainable parameters (0.52\% of
 
 We implemented a simplified agentic workflow using LangGraph to orchestrate the inference process. This architecture decomposes the task into three linear stages to maximize stability and accuracy. The state is passed between nodes as a typed dictionary containing the tweet, ground truth data, and intermediate results.
 
-\begin{figure}[htbp]
+\begin{figure*}[htbp]
     \centering
-    \includegraphics[width=0.48\textwidth]{simple_agent_arch.pdf}
-    \caption{Simple Agent Architecture using LangGraph. The workflow consists of Linguistic Analysis, Target Detection, and Stance Detection nodes.}
-    \label{fig:simple_agent_arch}
-\end{figure}
+    \resizebox{\textwidth}{!}{%
+    \begin{tikzpicture}[
+        % Global styles
+        font=\sffamily\small,
+        node distance=1.5cm and 1.5cm,
+        % Box styles
+        process/.style={
+            rectangle, 
+            minimum width=3.5cm, 
+            minimum height=1.2cm, 
+            text centered, 
+            draw=black, 
+            fill=white,
+            line width=0.8pt,
+            drop shadow
+        },
+        decision/.style={
+            diamond, 
+            minimum width=2.5cm, 
+            minimum height=2.5cm, 
+            text centered, 
+            draw=black, 
+            fill=neutral,
+            line width=0.8pt,
+            drop shadow
+        },
+        io/.style={
+            trapezium, 
+            trapezium left angle=70, 
+            trapezium right angle=110, 
+            minimum width=3cm, 
+            minimum height=1cm, 
+            text centered, 
+            draw=black, 
+            fill=primary!20,
+            line width=0.8pt,
+            drop shadow
+        },
+        agent/.style={
+            rectangle, 
+            rounded corners=5pt,
+            minimum width=3.5cm, 
+            minimum height=1.2cm, 
+            text centered, 
+            draw=secondary, 
+            line width=1.2pt,
+            fill=secondary!10,
+            drop shadow
+        },
+        eval/.style={
+            rectangle, 
+            minimum width=3.5cm, 
+            minimum height=1.2cm, 
+            text centered, 
+            draw=accent, 
+            line width=1.2pt,
+            fill=accent!10,
+            drop shadow
+        },
+        arrow/.style={
+            thick, 
+            ->, 
+            >=Stealth,
+            color=black!80
+        },
+        label/.style={
+            font=\scriptsize\itshape,
+            text=black!70
+        }
+    ]
+    
+    % --- Nodes ---
+    
+    % Input
+    \node (input) [io] {Input Tweet ($X$)};
+    
+    % Agentic Workflow Container
+    \node (agent_start) [agent, below=of input] {Linguistic Analysis Agent};
+    \node (target_gen) [agent, below=of agent_start] {Target Generation Agent};
+    \node (stance_gen) [agent, below=of target_gen] {Stance Classification Agent};
+    
+    % Intermediate Data
+    \node (ling_out) [process, right=of agent_start, xshift=1cm, dashed] {Sentiment \& Tone ($L$)};
+    \node (target_out) [process, right=of target_gen, xshift=1cm, dashed] {Predicted Target ($T_{pred}$)};
+    \node (stance_out) [process, right=of stance_gen, xshift=1cm, dashed] {Predicted Stance ($S_{pred}$)};
+    
+    % Evaluation Logic (Complex Part)
+    \node (expansion) [process, below=of stance_gen, fill=tertiary!10, draw=tertiary] {Ground Truth Expansion (LLM)};
+    \node (candidates) [process, below=of expansion] {Generate Variations ($T'_{gt1}, T'_{gt2}$)};
+    
+    \node (calc_sim) [eval, right=of candidates, xshift=2cm] {Cosine Similarity ($\cos$)};
+    \node (calc_metrics) [eval, below=of stance_out, yshift=-3.8cm] {Metrics (Recall, F1)};
+    
+    % Ground Truth Data
+    \node (gt_data) [io, left=of expansion, xshift=-1cm] {Ground Truth ($T_{gt}, S_{gt}$)};
+    
+    % Final Output
+    \node (final_score) [io, right=of calc_sim, xshift=1cm] {Final Scores};
+    
+    % --- Edges ---
+    
+    % Flow 1: Main Inference
+    \draw [arrow] (input) -- (agent_start);
+    \draw [arrow] (agent_start) -- (target_gen);
+    \draw [arrow] (target_gen) -- (stance_gen);
+    
+    % Data outputs
+    \draw [arrow, dashed] (agent_start) -- (ling_out);
+    \draw [arrow, dashed] (target_gen) -- (target_out);
+    \draw [arrow, dashed] (stance_gen) -- (stance_out);
+    
+    % Flow 2: Evaluation (Target)
+    \draw [arrow] (gt_data) -- (expansion);
+    \draw [arrow] (expansion) -- (candidates);
+    \draw [arrow] (candidates) -- (calc_sim) node[midway, above, label] {Candidates};
+    \draw [arrow] (target_out) -| (calc_sim) node[midway, right, label, yshift=-2cm] {$T_{pred}$};
+    
+    % Flow 3: Evaluation (Stance)
+    \draw [arrow] (gt_data) |- (calc_metrics);
+    \draw [arrow] (stance_out) -- (calc_metrics);
+    
+    % Final connections
+    \draw [arrow] (calc_sim) -- (final_score);
+    \draw [arrow] (calc_metrics) -| (final_score);
+    
+    % --- Grouping/Backgrounds ---
+    
+    % Agent System Box
+    \begin{scope}[on background layer]
+        \node [fit=(agent_start) (stance_gen) (ling_out) (stance_out), 
+               fill=blue!5, rounded corners, draw=blue!20, dashed, 
+               label={[anchor=north west, inner sep=5pt, text=blue!60, font=\bfseries]north west:Agentic Inference Pipeline}] (pipeline) {};
+    \end{scope}
+    
+    % Evaluation System Box
+    \begin{scope}[on background layer]
+        \node [fit=(expansion) (candidates) (calc_sim) (calc_metrics), 
+               fill=red!5, rounded corners, draw=red!20, dashed, 
+               label={[anchor=south west, inner sep=5pt, text=red!60, font=\bfseries, yshift=-0.5cm]south west:Evaluation Protocol}] (eval_sys) {};
+    \end{scope}
+    
+    \end{tikzpicture}%
+    }
+    \caption{Comprehensive Workflow Diagram. The system integrates a linear agentic inference pipeline (Blue) with a robust evaluation protocol (Red) that includes Ground Truth Expansion for fair target assessment.}
+    \label{fig:workflow_diagram}
+\end{figure*}
 
 The workflow consists of the following nodes:
 
@@ -192,11 +337,12 @@ This linear pipeline eliminates the instability often observed in complex multi-
 We evaluated our system on four distinct dataset configurations to assess its robustness across different scenarios.
 
 \subsection{Datasets}
+We evaluated our system on four distinct dataset configurations to assess its robustness across different scenarios. Crucially, the VAST dataset was entirely held out from training to serve as a zero-shot evaluation benchmark.
 \begin{itemize}
-    \item \textbf{TSE Explicit}: Tweets where the target is explicitly mentioned.
-    \item \textbf{TSE Implicit}: Tweets where the target is implied but not explicitly stated.
-    \item \textbf{VAST Explicit}: A diverse dataset with explicit targets.
-    \item \textbf{VAST Implicit}: A challenging subset where targets must be inferred from context.
+    \item \textbf{TSE Explicit}: A subset of the Target-Stance Extraction dataset where targets are explicitly mentioned in the text.
+    \item \textbf{TSE Implicit}: A subset of the TSE dataset where targets are implied but not explicitly stated, requiring contextual inference.
+    \item \textbf{VAST Explicit}: The explicit target subset of the Varied Stance Topics (VAST) dataset, covering a wide range of zero-shot topics.
+    \item \textbf{VAST Implicit}: The implicit target subset of the VAST dataset, representing the most challenging scenario where targets must be inferred from context without prior exposure during training.
 \end{itemize}
 
 \subsection{Evaluation Methodology}
