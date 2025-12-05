@@ -29,7 +29,6 @@
 \begin{document}
 
 \title{Agentic Open-Target Stance Detection with Finetuned 
-\thanks{Identify applicable funding source here. If none, delete this.}
 }
 
 
@@ -37,7 +36,7 @@
 \maketitle
 
 \section{Abstract}
-Open-Target Stance Detection (OTSD) presents a unique and significant challenge in natural language processing, requiring systems to identify targets and determine stances without predefined target lists. Unlike traditional stance detection, where targets are given, OTSD demands a higher level of semantic understanding to infer implicit targets from context. This paper presents a robust, privacy-preserving approach combining Parameter-Efficient Finetuning (PEFT) of local Large Language Models (LLMs) with a streamlined agentic workflow. We finetuned the Llama 3.1 8B model using Low-Rank Adaptation (LoRA) on a comprehensive combined dataset of VAST and TSE examples, enabling the model to jointly learn target extraction and stance classification. This finetuned model is integrated into a LangGraph-based agentic system featuring a three-stage pipeline: linguistic analysis, multi-hypothesis target generation, and stance classification. Our experimental results on diverse datasets demonstrate the effectiveness of this approach, achieving high target semantic similarity (up to 0.93) and competitive stance detection accuracy (up to 59.34\%) using locally hosted models. Furthermore, we introduce a novel evaluation protocol involving ground truth semantic expansion to rigorously assess target identification performance. The system effectively handles both explicit and implicit targets, validating the synergy between task-specific finetuning and agentic reasoning.
+Open-Target Stance Detection (OTSD) presents a unique and significant challenge in natural language processing, requiring systems to identify targets and determine stances without predefined target lists. Unlike traditional stance detection, where targets are given, OTSD demands a higher level of semantic understanding to infer implicit targets from context. This paper presents a robust, privacy-preserving approach combining Parameter-Efficient Finetuning (PEFT) of local Large Language Models (LLMs) with a streamlined agentic workflow. We finetuned the Llama 3.1 8B model using Low-Rank Adaptation (LoRA) on a comprehensive combined dataset of VAST and TSE examples, enabling the model to jointly learn target extraction and stance classification. This finetuned model is integrated into a LangGraph-based agentic system featuring a three-stage pipeline: linguistic analysis, multi-hypothesis target generation, and stance classification. Our experimental results on diverse datasets demonstrate the effectiveness of this approach, achieving high target semantic similarity (up to 0.83) and competitive stance detection accuracy (up to 59.34\%) using locally hosted models. Furthermore, we introduce a novel evaluation protocol involving ground truth semantic expansion to rigorously assess target identification performance. The system effectively handles both explicit and implicit targets, validating the synergy between task-specific finetuning and agentic reasoning.
 
 
 
@@ -453,6 +452,14 @@ However, this complex approach proved counterproductive for the Llama 3.1 8B mod
 \end{enumerate}
 
 These findings led us to the streamlined, linear architecture presented in this paper, which prioritizes the \textit{quality} of the finetuned model over the \textit{quantity} of agentic tools.
+
+\section{Code and Data Availability}
+
+The complete source code for the agentic system, finetuning scripts, and experimental pipelines is publicly available at:
+\url{https://github.com/PavanKalisetti/agentic-target-stance-detection}
+
+The specific datasets used for training and evaluation, including the Zero-Shot and ChatGPT-generated subsets, can be accessed at:
+\url{https://github.com/PavanKalisetti/agentic-target-stance-detection/tree/master/data_new/Zero_Stance-Chat_GPT}
 
 \section{Conclusion}
 
