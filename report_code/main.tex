@@ -66,22 +66,42 @@ Our methodology integrates two key components: a finetuned local LLM adapted for
 To adapt the Llama 3.1 8B model for OTSD, we employed Parameter-Efficient Finetuning (PEFT) using Low-Rank Adaptation (LoRA). Full finetuning of 8B parameter models is computationally expensive; LoRA mitigates this by freezing the pretrained weights and injecting trainable low-rank matrices into specific layers.
 
 \subsubsection{Dataset Construction}
-We constructed a combined training dataset by merging resources from established stance detection benchmarks:
+We constructed a unified training dataset by merging resources from established stance detection benchmarks. The dataset preparation process involved:
+
 \begin{itemize}
-    \item \textbf{TSE Dataset}: Provides examples with explicitly mentioned targets.
-    \item \textbf{VAST Dataset}: Offers a diverse range of topics and stances, including implicit targets.
+    \item \textbf{Source Datasets}: Combined examples from TSE (Twitter Stance Extraction) and VAST datasets, providing coverage of both explicit and implicit target scenarios.
+    \item \textbf{Data Preprocessing}: Applied text cleaning to remove common prefixes (e.g., "I am in favor of") from target annotations, ensuring consistent target formatting across examples.
+    \item \textbf{Multi-Task Formatting}: Each training example was converted into two instruction-following pairs using the Alpaca format:
+    \begin{enumerate}
+        \item \textbf{Task A - Target Extraction}: Instruction to identify the primary target from raw text, with the cleaned target as the expected output.
+        \item \textbf{Task B - Stance Classification}: Instruction to determine stance (FAVOR, AGAINST, or NONE) given both the target and original text.
+    \end{enumerate}
+    \item \textbf{Dataset Statistics}: The final training set contained 208,804 original examples, expanded to 417,608 training instances (two tasks per example), enabling the model to learn both target identification and stance classification in a unified framework.
 \end{itemize}
-The combined dataset was formatted into instruction-following pairs, teaching the model to extract the primary target and determine the stance (FAVOR, AGAINST, NONE) in a structured format.
+
+This dual-task formulation allowed the model to develop a coherent understanding of the relationship between target identification and stance expression, improving generalization across both explicit and implicit target scenarios.
 
 \subsubsection{Training Configuration}
-We utilized the Unsloth library for optimized training. The configuration included:
-\begin{itemize}
-    \item \textbf{Base Model}: Llama 3.1 8B (4-bit quantized).
-    \item \textbf{LoRA Parameters}: Rank $r=16$, Alpha $\alpha=16$.
-    \item \textbf{Target Modules}: q\_proj, k\_proj, v\_proj, o\_proj, gate\_proj, up\_proj, down\_proj.
-    \item \textbf{Optimization}: AdamW 8-bit optimizer, max sequence length of 2048 tokens.
-\end{itemize}
-This finetuning process specialized the model for the specific output format and reasoning required for stance detection, significantly improving its zero-shot capabilities compared to the base model.
+We utilized the Unsloth library for optimized training, which provides 2x faster finetuning with reduced memory requirements. The training configuration included:
+    \begin{itemize}
+    \item \textbf{Base Model}: Llama 3.1 8B (4-bit quantized using BitsAndBytes).
+    \item \textbf{LoRA Parameters}: Rank $r=16$, Alpha $\alpha=16$, dropout $=0$.
+    \item \textbf{Target Modules}: q\_proj, k\_proj, v\_proj, o\_proj, gate\_proj, up\_proj, down\_proj (all attention and feed-forward projection layers).
+    \item \textbf{Optimization}: AdamW 8-bit optimizer with learning rate $2 \times 10^{-4}$, weight decay $0.001$, linear learning rate scheduler.
+    \item \textbf{Training Setup}: Max sequence length of 2048 tokens, batch size of 2 per device with gradient accumulation of 4 steps, warmup steps of 5.
+    \item \textbf{Memory Efficiency}: Gradient checkpointing enabled using Unsloth's optimized implementation, resulting in only 0.52\% of parameters being trainable (41.9M of 8.07B total parameters).
+    \end{itemize}
+
+The finetuning process employed a multi-task learning approach, training the model simultaneously on two related tasks: (1) target extraction from raw text, and (2) stance classification given a target-text pair. This dual-task formulation, implemented using the Alpaca instruction-following format, enabled the model to learn both tasks in a unified framework. The training dataset consisted of 208,804 original examples, which were expanded to 417,608 training instances (two tasks per example), ensuring comprehensive coverage of both explicit and implicit target scenarios.
+
+\begin{figure}[htbp]
+    \centering
+    \includegraphics[width=0.48\textwidth]{finetuning_arch.pdf}
+    \caption{Finetuned Llama 3.1 8B Architecture with LoRA Adapters. The model processes input text through transformer decoder layers with LoRA-injected trainable matrices, generating both target and stance outputs.}
+    \label{fig:finetuning_arch}
+\end{figure}
+
+This finetuning process specialized the model for the specific output format and reasoning required for stance detection, significantly improving its zero-shot capabilities compared to the base model. The LoRA adapters, when merged with the base model, enable efficient inference while maintaining the specialized knowledge learned during training.
 
 \subsection{Agentic Architecture}
 
@@ -119,40 +139,68 @@ We evaluated our system on four distinct dataset configurations to assess its ro
 \end{itemize}
 
 \subsection{Evaluation Metrics}
-We employed two primary metrics:
-\begin{enumerate}
-    \item \textbf{Stance Accuracy}: The percentage of correct stance classifications (FAVOR, AGAINST, NEUTRAL) compared to ground truth.
-    \item \textbf{Target Semantic Similarity}: To evaluate target generation, we calculated the cosine similarity between the embeddings of the generated target and the ground truth target. This accounts for semantic equivalence (e.g., "COVID-19" vs "Coronavirus") that exact string matching would miss.
-\end{enumerate}
+We employed comprehensive evaluation metrics to assess both stance classification and target identification performance:
+
+\textbf{Stance Classification Metrics}:
+\begin{itemize}
+    \item \textbf{Accuracy}: The percentage of correct stance classifications (FAVOR, AGAINST, NEUTRAL) compared to ground truth.
+    \item \textbf{F1-Macro}: Macro-averaged F1 score across all stance classes, providing equal weight to each class.
+    \item \textbf{F1-Weighted}: Weighted F1 score accounting for class imbalance in the datasets.
+    \item \textbf{Precision and Recall}: Macro-averaged precision and recall scores to assess the model's performance on each stance class.
+\end{itemize}
+
+\textbf{Target Identification Metrics}:
+\begin{itemize}
+    \item \textbf{Semantic Similarity}: We calculated the cosine similarity between embeddings of generated targets and ground truth targets using the same Llama 3.1 8B model's embedding endpoint. This metric accounts for semantic equivalence (e.g., "COVID-19" vs "Coronavirus") that exact string matching would miss, providing a more realistic assessment of target identification quality.
+\end{itemize}
 
 \section{Results}
 
-Table~\ref{tab:results} presents the performance of our Agentic Stance Detection system.
+Tables~\ref{tab:results_stance} and~\ref{tab:results_target} present the comprehensive performance evaluation of our Agentic Stance Detection system across stance classification and target identification tasks.
 
 \begin{table}[htbp]
 \caption{Performance Metrics on Evaluation Datasets}
 \begin{center}
-\begin{tabular}{|l|c|c|}
+\begin{tabular}{|l|c|c|c|c|c|}
 \hline
-\textbf{Dataset} & \textbf{Stance Accuracy} & \textbf{Target Similarity} \\
+\textbf{Dataset} & \textbf{Accuracy} & \textbf{F1-Macro} & \textbf{F1-Weighted} & \textbf{Precision} & \textbf{Recall} \\
 \hline
-TSE Explicit & 44.04\% & 0.9311 \\
-TSE Implicit & 47.50\% & 0.9203 \\
-VAST Explicit & 55.77\% & 0.8957 \\
-VAST Implicit & 59.34\% & 0.8603 \\
+TSE Explicit & 44.04\% & 0.3222 & 0.3990 & 0.2960 & 0.3617 \\
+TSE Implicit & 47.50\% & 0.3393 & 0.4376 & 0.3159 & 0.3676 \\
+VAST Explicit & 55.77\% & 0.3696 & 0.5552 & 0.3686 & 0.3708 \\
+VAST Implicit & 59.34\% & 0.3911 & 0.5870 & 0.3901 & 0.3935 \\
 \hline
 \end{tabular}
-\label{tab:results}
+\label{tab:results_stance}
+\end{center}
+\end{table}
+
+\begin{table}[htbp]
+\caption{Target Semantic Similarity Metrics}
+\begin{center}
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Dataset} & \textbf{Avg. Cosine Similarity} \\
+\hline
+TSE Explicit & 0.8278 \\
+TSE Implicit & 0.8009 \\
+VAST Explicit & 0.7393 \\
+VAST Implicit & 0.6507 \\
+\hline
+\end{tabular}
+\label{tab:results_target}
 \end{center}
 \end{table}
 
 \subsection{Analysis}
 
-\textbf{Target Generation}: The system achieved exceptionally high target semantic similarity scores, ranging from 0.86 to 0.93. This indicates that the finetuning process successfully taught the model to identify the core topic of the text, even when it wasn't an exact string match to the ground truth. The multi-hypothesis generation strategy further ensured that the most relevant target was captured.
+\textbf{Target Generation Performance}: The system achieved strong target semantic similarity scores, with TSE Explicit leading at 0.8278, followed by TSE Implicit (0.8009), VAST Explicit (0.7393), and VAST Implicit (0.6507). The higher similarity scores on TSE datasets suggest that the finetuning process was particularly effective for Twitter-style content with explicit target mentions. The multi-hypothesis generation strategy (generating three target candidates) contributed to capturing semantically equivalent targets even when phrasing differed from ground truth annotations.
 
-\textbf{Stance Detection}: Stance accuracy was competitive, particularly on the VAST datasets (up to 59.34\%). Interestingly, the system performed better on the VAST Implicit dataset than on the TSE Explicit dataset. This suggests that the model's reasoning capabilities, enhanced by the linguistic analysis stage, are robust enough to handle implicit contexts effectively. The lower accuracy on TSE Explicit might be attributed to domain-specific nuances or shorter text lengths typical of tweets, which provide less context for the model.
+\textbf{Stance Classification Performance}: Stance detection accuracy ranged from 44.04\% (TSE Explicit) to 59.34\% (VAST Implicit), with F1-macro scores between 0.32 and 0.39. The system demonstrated superior performance on VAST datasets, achieving 55.77\% accuracy on explicit targets and 59.34\% on implicit targets. Notably, the VAST Implicit dataset achieved the highest performance across all metrics, suggesting that the finetuned model's reasoning capabilities, enhanced by the linguistic analysis stage, are particularly robust for handling implicit contexts.
 
-\textbf{Impact of Finetuning}: The integration of the finetuned model was crucial. Previous experiments with the base Llama 3.1 8B model (without finetuning) struggled to generate structured outputs or identify targets consistently. The PEFT adaptation ensured that the model followed the agentic instructions precisely.
+The F1-weighted scores (0.40-0.59) consistently exceeded F1-macro scores (0.32-0.39), indicating that the model performs better on more frequent stance classes. Precision and recall values are relatively balanced across datasets, with slight variations suggesting that the model's errors are distributed between false positives and false negatives rather than heavily skewed in one direction.
+
+\textbf{Impact of Finetuning}: The integration of the finetuned model was crucial for system performance. Previous experiments with the base Llama 3.1 8B model (without finetuning) struggled to generate structured outputs or identify targets consistently, achieving only 34.56\% accuracy in preliminary tests. The PEFT adaptation using LoRA, with only 0.52\% of parameters trainable, enabled the model to learn task-specific patterns while maintaining computational efficiency. The multi-task training approach (simultaneous target extraction and stance classification) proved effective, as evidenced by the strong target similarity scores and competitive stance accuracy.
 
 \section{Conclusion}
 
