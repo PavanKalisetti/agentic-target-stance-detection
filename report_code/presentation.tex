@@ -1,0 +1,187 @@
+\documentclass{beamer}
+\usetheme{Madrid}
+\usecolortheme{dolphin}
+
+\title{Agentic Open-Target Stance Detection}
+\subtitle{Finetuned Local LLMs with Agentic Reasoning}
+\date{\today}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}
+\frametitle{Table of Contents}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+\begin{frame}
+\frametitle{Introduction}
+\begin{itemize}
+    \item \textbf{Stance Detection (SD)}: Determining whether an author supports, opposes, or is neutral toward a target.
+    \item \textbf{Open-Target Stance Detection (OTSD)}:
+    \begin{itemize}
+        \item Target is NOT known beforehand.
+        \item Target must be inferred from context (often implicit).
+    \end{itemize}
+    \item \textbf{Challenge}:
+    \begin{itemize}
+        \item "They really messed up this new patch" $\rightarrow$ Target: "new patch", Stance: AGAINST.
+        \item Implicit targets require deep semantic understanding.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Motivation}
+\begin{frame}
+\frametitle{Motivation}
+\begin{itemize}
+    \item \textbf{Limitations of Proprietary Models (GPT-4, Claude)}:
+    \begin{itemize}
+        \item High cost.
+        \item Latency issues.
+        \item Data privacy concerns.
+    \end{itemize}
+    \item \textbf{Proposed Solution}:
+    \begin{itemize}
+        \item Use smaller, locally-hosted open-source models (Llama 3.1 8B).
+        \item \textbf{Parameter-Efficient Finetuning (PEFT)}: Adapt general models to SD nuances.
+        \item \textbf{Agentic Workflow}: Break down complex reasoning into manageable steps.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Methodology}
+\begin{frame}
+\frametitle{Methodology: Model Finetuning}
+\begin{itemize}
+    \item \textbf{Base Model}: Llama 3.1 8B (4-bit quantized).
+    \item \textbf{Technique}: Low-Rank Adaptation (LoRA).
+    \item \textbf{Training Data}:
+    \begin{itemize}
+        \item Combined datasets: COVID-19, IBM-30k, P-Stance, SemEval-2016, WTWT.
+        \item \textbf{Excluded}: VAST and ChatGPT datasets (for zero-shot evaluation).
+    \end{itemize}
+    \item \textbf{Tasks}:
+    \begin{itemize}
+        \item Task A: Target Extraction.
+        \item Task B: Stance Classification.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Methodology: Agentic Architecture}
+\textbf{LangGraph-based Linear Pipeline}:
+\begin{enumerate}
+    \item \textbf{Linguistic Analysis Agent}:
+    \begin{itemize}
+        \item Analyzes sentiment, tone, and style.
+        \item Primes context for target detection.
+    \end{itemize}
+    \item \textbf{Target Generation Agent}:
+    \begin{itemize}
+        \item Generates top 3 concise target candidates.
+        \item Handles ambiguity in natural language.
+    \end{itemize}
+    \item \textbf{Stance Classification Agent}:
+    \begin{itemize}
+        \item Determines stance (FAVOR, AGAINST, NEUTRAL) towards the identified target.
+    \end{itemize}
+\end{enumerate}
+\end{frame}
+
+\section{Evaluation}
+\begin{frame}
+\frametitle{Evaluation Datasets}
+\begin{itemize}
+    \item \textbf{TSE Explicit}: Targets explicitly mentioned.
+    \item \textbf{TSE Implicit}: Targets implied from context.
+    \item \textbf{VAST Explicit}: Zero-shot topics, explicit targets.
+    \item \textbf{VAST Implicit}: Zero-shot topics, implicit targets (Most Challenging).
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Evaluation Protocol: Ground Truth Expansion}
+\begin{itemize}
+    \item \textbf{Problem}: Predicted target might be semantically correct but lexically different.
+    \item \textbf{Example}: "US Govt" vs "Federal Government".
+    \item \textbf{Solution}:
+    \begin{itemize}
+        \item Generate semantic variations of ground truth targets using an LLM.
+        \item Calculate \textbf{Cosine Similarity} between prediction and expanded ground truth.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Results}
+\begin{frame}
+\frametitle{Results: Target Similarity}
+\begin{table}
+\centering
+\begin{tabular}{|l|c|}
+\hline
+\textbf{Dataset} & \textbf{Avg. Cosine Similarity} \\
+\hline
+TSE Explicit & 0.8278 \\
+TSE Implicit & 0.8009 \\
+VAST Explicit & 0.7393 \\
+VAST Implicit & 0.6507 \\
+\hline
+\end{tabular}
+\caption{Target Semantic Similarity}
+\end{table}
+\begin{itemize}
+    \item High similarity scores confirm effective target extraction.
+\end{itemize}
+\end{frame}
+
+\section{Ablation Studies}
+\begin{frame}
+\frametitle{Ablation Studies}
+\begin{itemize}
+    \item \textbf{Impact of Finetuning}:
+    \begin{itemize}
+        \item Base model: ~33\% accuracy (random chance).
+        \item Finetuned model: +20\% improvement, strict JSON adherence.
+    \end{itemize}
+    \item \textbf{Agentic vs. Single-Stage}:
+    \begin{itemize}
+        \item Single-Stage: Faster but 12\% drop in target accuracy on implicit data.
+        \item Agentic: "Chain of Thought" reduces hallucinations.
+    \end{itemize}
+    \item \textbf{Complex vs. Linear Agent}:
+    \begin{itemize}
+        \item Complex (Debate/Search): Context overflow, hallucinations.
+        \item Linear: Stable, focused reasoning.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{Conclusion}
+\begin{frame}
+\frametitle{Conclusion}
+\begin{itemize}
+    \item Successfully combined \textbf{PEFT} and \textbf{Agentic Workflow} for OTSD.
+    \item \textbf{Key Achievements}:
+    \begin{itemize}
+        \item Effective use of local Llama 3.1 8B model.
+        \item Robust performance on implicit targets.
+        \item Novel "Ground Truth Expansion" evaluation.
+    \end{itemize}
+    \item \textbf{Future Work}:
+    \begin{itemize}
+        \item Refine stance classification head.
+        \item Explore iterative feedback mechanisms.
+    \end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\centering
+\Huge Thank You!
+\end{frame}
+
+\end{document}
