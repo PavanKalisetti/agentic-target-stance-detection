@@ -23,7 +23,7 @@
     \item \textbf{Open-Target Stance Detection (OTSD)}:
     \begin{itemize}
         \item Target is NOT known beforehand.
-        \item Target must be inferred from context (often implicit).
+        \item Target must be inferred from context.
     \end{itemize}
     \item \textbf{Challenge}:
     \begin{itemize}
@@ -37,7 +37,7 @@
 \begin{frame}
 \frametitle{Motivation}
 \begin{itemize}
-    \item \textbf{Limitations of Proprietary Models (GPT-4, Claude)}:
+    \item \textbf{Limitations of Proprietary Models (GPT-5, Claude4.5, Gemini 3)}:
     \begin{itemize}
         \item High cost.
         \item Latency issues.
@@ -61,7 +61,7 @@
     \item \textbf{Training Data}:
     \begin{itemize}
         \item Combined datasets: COVID-19, IBM-30k, P-Stance, SemEval-2016, WTWT.
-        \item \textbf{Excluded}: VAST and ChatGPT datasets (for zero-shot evaluation).
+        
     \end{itemize}
     \item \textbf{Tasks}:
     \begin{itemize}
@@ -82,8 +82,8 @@
     \end{itemize}
     \item \textbf{Target Generation Agent}:
     \begin{itemize}
-        \item Generates top 3 concise target candidates.
-        \item Handles ambiguity in natural language.
+        \item Generates a single, concise target.
+        \item Identifies the primary subject of the stance.
     \end{itemize}
     \item \textbf{Stance Classification Agent}:
     \begin{itemize}
@@ -99,7 +99,7 @@
     \item \textbf{TSE Explicit}: Targets explicitly mentioned.
     \item \textbf{TSE Implicit}: Targets implied from context.
     \item \textbf{VAST Explicit}: Zero-shot topics, explicit targets.
-    \item \textbf{VAST Implicit}: Zero-shot topics, implicit targets (Most Challenging).
+    \item \textbf{VAST Implicit}: Zero-shot topics, implicit targets.
 \end{itemize}
 \end{frame}
 
