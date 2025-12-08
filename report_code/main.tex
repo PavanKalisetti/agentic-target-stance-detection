@@ -125,12 +125,6 @@ COMCAST willing to outbid Disney for Fox... could the deal between Disney and Fo
 \end{tabular}
 \end{table*}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.48\textwidth]{finetuning_arch.pdf}
-    \caption{Finetuned Llama 3.1 8B Architecture with LoRA Adapters. The model processes input text through transformer decoder layers with LoRA-injected trainable matrices, generating both target and stance outputs.}
-    \label{fig:finetuning_arch}
-\end{figure}
 
 \subsubsection{Training Configuration}
 The specific hyperparameters used for the LoRA finetuning were:
@@ -469,12 +463,6 @@ In the early stages of this research, we explored a highly complex agentic archi
     \item \textbf{Separate Explicit/Implicit Agents}: Specialized nodes for different target types.
 \end{itemize}
 
-\begin{figure}[htbp]
-    \centering
-    \includegraphics[width=0.48\textwidth]{system_architecture.png}
-    \caption{Initial Complex Agent Architecture (Discarded). This architecture featured web search and debate nodes but suffered from context overflow and hallucinations.}
-    \label{fig:complex_agent_arch}
-\end{figure}
 
 However, this complex approach proved counterproductive for the Llama 3.1 8B model:
 \begin{enumerate}
