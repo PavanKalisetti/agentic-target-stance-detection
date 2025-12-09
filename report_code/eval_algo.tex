@@ -1,0 +1,28 @@
+\begin{algorithm}
+\caption{Evaluation Protocol with Ground Truth Expansion}
+\label{alg:eval_protocol}
+\begin{algorithmic}[1]
+\REQUIRE $D_{test} = \{(X_i, T_{gt,i}, S_{gt,i})\}_{i=1}^N$
+\REQUIRE Finetuned Model $M$, Embedding Function $E(\cdot)$
+\ENSURE $Score_{target}, Score_{stance}$
+\FOR{each sample $(X, T_{gt}, S_{gt})$ in $D_{test}$}
+    \STATE \textbf{Step 1: Inference}
+    \STATE $L \leftarrow \text{LinguisticAnalysis}(X)$
+    \STATE $T_{pred} \leftarrow \text{TargetGeneration}(X, L)$
+    \STATE $S_{pred} \leftarrow \text{StanceClassification}(X, T_{pred})$
+    
+    \STATE \textbf{Step 2: Ground Truth Expansion}
+    \STATE $T'_{gt1}, T'_{gt2} \leftarrow \text{GenerateVariations}(T_{gt})$
+    \STATE $\mathcal{T}_{expanded} \leftarrow \{T_{gt}, T'_{gt1}, T'_{gt2}\}$
+    
+    \STATE \textbf{Step 3: Target Evaluation}
+    \STATE $Sim_i \leftarrow \max_{T \in \mathcal{T}_{expanded}} \cos(E(T_{pred}), E(T))$
+    
+    \STATE \textbf{Step 4: Stance Evaluation}
+    \STATE $Correct_{stance, i} \leftarrow \mathbb{I}(S_{pred} == S_{gt})$
+\ENDFOR
+\STATE $Score_{target} \leftarrow \frac{1}{N} \sum Sim_i$
+\STATE $Score_{stance} \leftarrow \text{CalculateMetrics}(\{Correct_{stance, i}\})$
+\RETURN $Score_{target}, Score_{stance}$
+\end{algorithmic}
+\end{algorithm}

@@ -3,6 +3,7 @@
 \usepackage[hyphens]{url}
 \usepackage{cite}
 \usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithm}
 \usepackage{algorithmic}
 \usepackage{graphicx}
 \usepackage{textcomp}
@@ -23,6 +24,18 @@
 \definecolor{tertiary}{RGB}{34, 139, 34}   % ForestGreen
 \definecolor{neutral}{RGB}{240, 240, 240}  % LightGray
 \definecolor{accent}{RGB}{220, 20, 60}     % Crimson
+
+% New Architecture Colors
+\definecolor{stage1bg}{RGB}{255, 250, 240} % Light Yellow/Cream
+\definecolor{stage1border}{RGB}{218, 165, 32} % Goldenrod
+\definecolor{stage2bg}{RGB}{240, 248, 255} % AliceBlue
+\definecolor{stage2border}{RGB}{70, 130, 180} % SteelBlue
+\definecolor{stage3bg}{RGB}{245, 245, 245} % WhiteSmoke
+\definecolor{stage3border}{RGB}{105, 105, 105} % DimGray
+\definecolor{agentcolor}{RGB}{255, 127, 80} % Coral
+\definecolor{reasoningcolor}{RGB}{230, 230, 250} % Lavender
+\definecolor{inputcolor}{RGB}{255, 255, 255}
+\definecolor{outputcolor}{RGB}{240, 255, 240} % Honeydew
 
 \def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
     T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
@@ -157,149 +170,166 @@ We implemented a simplified agentic workflow using LangGraph to orchestrate the 
 \begin{figure*}[htbp]
     \centering
     \resizebox{\textwidth}{!}{%
-    \begin{tikzpicture}[
-        % Global styles
-        font=\sffamily\small,
-        node distance=1.5cm and 1.5cm,
-        % Box styles
-        process/.style={
-            rectangle, 
-            minimum width=3.5cm, 
-            minimum height=1.2cm, 
-            text centered, 
-            draw=black, 
-            fill=white,
-            line width=0.8pt,
-            drop shadow
-        },
-        decision/.style={
-            diamond, 
-            minimum width=2.5cm, 
-            minimum height=2.5cm, 
-            text centered, 
-            draw=black, 
-            fill=neutral,
-            line width=0.8pt,
-            drop shadow
-        },
-        io/.style={
-            trapezium, 
-            trapezium left angle=70, 
-            trapezium right angle=110, 
-            minimum width=3cm, 
-            minimum height=1cm, 
-            text centered, 
-            draw=black, 
-            fill=primary!20,
-            line width=0.8pt,
-            drop shadow
-        },
-        agent/.style={
-            rectangle, 
-            rounded corners=5pt,
-            minimum width=3.5cm, 
-            minimum height=1.2cm, 
-            text centered, 
-            draw=secondary, 
-            line width=1.2pt,
-            fill=secondary!10,
-            drop shadow
-        },
-        eval/.style={
-            rectangle, 
-            minimum width=3.5cm, 
-            minimum height=1.2cm, 
-            text centered, 
-            draw=accent, 
-            line width=1.2pt,
-            fill=accent!10,
-            drop shadow
-        },
-        arrow/.style={
-            thick, 
-            ->, 
-            >=Stealth,
-            color=black!80
-        },
-        label/.style={
-            font=\scriptsize\itshape,
-            text=black!70
-        }
-    ]
-    
-    % --- Nodes ---
-    
-    % Input
-    \node (input) [io] {Input Tweet ($X$)};
-    
-    % Agentic Workflow Container
-    \node (agent_start) [agent, below=of input] {Linguistic Analysis Agent};
-    \node (target_gen) [agent, below=of agent_start] {Target Generation Agent};
-    \node (stance_gen) [agent, below=of target_gen] {Stance Classification Agent};
-    
-    % Intermediate Data
-    \node (ling_out) [process, right=of agent_start, xshift=1cm, dashed] {Sentiment \& Tone ($L$)};
-    \node (target_out) [process, right=of target_gen, xshift=1cm, dashed] {Predicted Target ($T_{pred}$)};
-    \node (stance_out) [process, right=of stance_gen, xshift=1cm, dashed] {Predicted Stance ($S_{pred}$)};
-    
-    % Evaluation Logic (Complex Part)
-    \node (expansion) [process, below=of stance_gen, fill=tertiary!10, draw=tertiary] {Ground Truth Expansion (LLM)};
-    \node (candidates) [process, below=of expansion] {Generate Variations ($T'_{gt1}, T'_{gt2}$)};
-    
-    \node (calc_sim) [eval, right=of candidates, xshift=2cm] {Cosine Similarity ($\cos$)};
-    \node (calc_metrics) [eval, below=of stance_out, yshift=-3.8cm] {Metrics (Recall, F1)};
-    
-    % Ground Truth Data
-    \node (gt_data) [io, left=of expansion, xshift=-1cm] {Ground Truth ($T_{gt}, S_{gt}$)};
-    
-    % Final Output
-    \node (final_score) [io, right=of calc_sim, xshift=1cm] {Final Scores};
-    
-    % --- Edges ---
-    
-    % Flow 1: Main Inference
-    \draw [arrow] (input) -- (agent_start);
-    \draw [arrow] (agent_start) -- (target_gen);
-    \draw [arrow] (target_gen) -- (stance_gen);
-    
-    % Data outputs
-    \draw [arrow, dashed] (agent_start) -- (ling_out);
-    \draw [arrow, dashed] (target_gen) -- (target_out);
-    \draw [arrow, dashed] (stance_gen) -- (stance_out);
-    
-    % Flow 2: Evaluation (Target)
-    \draw [arrow] (gt_data) -- (expansion);
-    \draw [arrow] (expansion) -- (candidates);
-    \draw [arrow] (candidates) -- (calc_sim) node[midway, above, label] {Candidates};
-    \draw [arrow] (target_out) -| (calc_sim) node[midway, right, label, yshift=-2cm] {$T_{pred}$};
-    
-    % Flow 3: Evaluation (Stance)
-    \draw [arrow] (gt_data) |- (calc_metrics);
-    \draw [arrow] (stance_out) -- (calc_metrics);
-    
-    % Final connections
-    \draw [arrow] (calc_sim) -- (final_score);
-    \draw [arrow] (calc_metrics) -| (final_score);
-    
-    % --- Grouping/Backgrounds ---
-    
-    % Agent System Box
-    \begin{scope}[on background layer]
-        \node [fit=(agent_start) (stance_gen) (ling_out) (stance_out), 
-               fill=blue!5, rounded corners, draw=blue!20, dashed, 
-               label={[anchor=north west, inner sep=5pt, text=blue!60, font=\bfseries]north west:Agentic Inference Pipeline}] (pipeline) {};
-    \end{scope}
-    
-    % Evaluation System Box
-    \begin{scope}[on background layer]
-        \node [fit=(expansion) (candidates) (calc_sim) (calc_metrics), 
-               fill=red!5, rounded corners, draw=red!20, dashed, 
-               label={[anchor=south west, inner sep=5pt, text=red!60, font=\bfseries, yshift=-0.5cm]south west:Evaluation Protocol}] (eval_sys) {};
-    \end{scope}
-    
-    \end{tikzpicture}%
+\begin{tikzpicture}[
+    font=\sffamily\small,
+    node distance=1.2cm and 0.8cm, % Vertical and Horizontal
+    % Styles
+    stagebox/.style={
+        rectangle,
+        rounded corners=10pt,
+        draw=#1,
+        fill=#1!10,
+        dashed,
+        line width=1.5pt,
+        inner sep=12pt
+    },
+    agentnode/.style={
+        rectangle,
+        rounded corners=8pt,
+        minimum width=3.5cm,
+        minimum height=1.2cm,
+        text centered,
+        draw=agentcolor,
+        line width=1.5pt,
+        fill=white,
+        drop shadow,
+        font=\bfseries
+    },
+    reasoningbubble/.style={
+        rectangle,
+        rounded corners=5pt,
+        draw=gray!40,
+        fill=reasoningcolor,
+        text width=4.5cm,
+        align=left,
+        font=\scriptsize\itshape,
+        drop shadow,
+        inner sep=8pt
+    },
+    outputbubble/.style={
+        rectangle,
+        rounded corners=5pt,
+        draw=gray!40,
+        fill=white,
+        text width=3.5cm,
+        align=left,
+        font=\scriptsize,
+        drop shadow,
+        inner sep=8pt
+    },
+    arrow/.style={
+        thick,
+        ->,
+        >=Stealth,
+        color=gray!70,
+        line width=1.5pt
+    },
+    labeltext/.style={
+        font=\bfseries\scriptsize,
+        color=gray!60
     }
-    \caption{Comprehensive Workflow Diagram. The system integrates a linear agentic inference pipeline (Blue) with a robust evaluation protocol (Red) that includes Ground Truth Expansion for fair target assessment.}
+]
+
+% --- Input Node (Top Center) ---
+\node (tweet) [outputbubble, text width=8cm, align=center, fill=yellow!5, draw=yellow!40] {
+    \textbf{Input Tweet ($X$)}\\
+    "Maybe if people want to walk around without masks on they can organize into fenced-off private mask nudist colonies... \#WearAMask"
+};
+
+% --- Stage 1: Linguistic Analysis ---
+% Agent (Left)
+\node (ling_agent) [agentnode, below=of tweet, xshift=-4cm, yshift=-0.5cm] {Linguistic Analysis Agent};
+
+% Reasoning (Middle)
+\node (ling_reason) [reasoningbubble, right=of ling_agent] {
+    \textbf{Reasoning:}\\
+    "The user employs sarcasm ('nudist colonies') and strong negative adjectives ('idiotic') to criticize a specific behavior. The hashtag \#WearAMask explicitly clarifies the intent."
+};
+
+% Output (Right)
+\node (ling_out) [outputbubble, right=of ling_reason, fill=orange!5, draw=orange!30] {
+    \textbf{Output ($L$):}\\
+    \textit{Sentiment}: Critical\\
+    \textit{Tone}: Sarcastic, Mocking
+};
+
+% --- Stage 2: Target Generation ---
+% Agent (Left)
+\node (target_agent) [agentnode, below=of ling_agent, yshift=-2.0cm] {Target Generation Agent};
+
+% Reasoning (Middle)
+\node (target_reason) [reasoningbubble, right=of target_agent] {
+    \textbf{Reasoning:}\\
+    "The text discusses 'walking around without masks' and mocks the 'liberty' to do so. The central topic of debate is the usage of face masks in public."
+};
+
+% Output (Right)
+\node (target_out) [outputbubble, right=of target_reason, fill=blue!5, draw=blue!30] {
+    \textbf{Output ($T_{pred}$):}\\
+    "Face Masks"
+};
+
+% --- Stage 3: Stance Classification ---
+% Agent (Left)
+\node (stance_agent) [agentnode, below=of target_agent, yshift=-2.0cm] {Stance Classification Agent};
+
+% Reasoning (Middle)
+\node (stance_reason) [reasoningbubble, right=of stance_agent] {
+    \textbf{Reasoning:}\\
+    "The user mocks those who refuse masks and explicitly advocates for wearing them via the hashtag. They support the usage of masks for societal safety."
+};
+
+% Output (Right)
+\node (stance_out) [outputbubble, right=of stance_reason, fill=green!5, draw=green!30] {
+    \textbf{Output ($S_{pred}$):}\\
+    \textbf{FAVOR}
+};
+
+% --- Connections ---
+
+% Vertical Spine (Agent to Agent)
+\draw [arrow] (tweet.south) -- ++(0,-0.5) -| (ling_agent.north);
+\draw [arrow] (ling_agent) -- (target_agent);
+\draw [arrow] (target_agent) -- (stance_agent);
+
+% Horizontal Flow (Agent -> Reasoning -> Output)
+\draw [arrow] (ling_agent) -- (ling_reason);
+\draw [arrow] (ling_reason) -- (ling_out);
+
+\draw [arrow] (target_agent) -- (target_reason);
+\draw [arrow] (target_reason) -- (target_out);
+
+\draw [arrow] (stance_agent) -- (stance_reason);
+\draw [arrow] (stance_reason) -- (stance_out);
+
+% Feed-forward (Output to next Agent)
+% Ling Out -> Target Agent
+\draw [arrow, dashed] (ling_out.south) |- ($(ling_out.south)!0.5!(target_agent.north)$) -| (target_agent.north);
+
+% Target Out -> Stance Agent
+\draw [arrow, dashed] (target_out.south) |- ($(target_out.south)!0.5!(stance_agent.north)$) -| (stance_agent.north);
+
+
+% --- Background Boxes (Stages) ---
+
+% Stage 1
+\begin{scope}[on background layer]
+    \node (stage1) [stagebox=stage1border, fit=(ling_agent) (ling_reason) (ling_out), label={[anchor=north west, text=stage1border, font=\bfseries\footnotesize, xshift=10pt]north west:Stage 1}] {};
+\end{scope}
+
+% Stage 2
+\begin{scope}[on background layer]
+    \node (stage2) [stagebox=stage2border, fit=(target_agent) (target_reason) (target_out), label={[anchor=north west, text=stage2border, font=\bfseries\footnotesize, xshift=10pt]north west:Stage 2}] {};
+\end{scope}
+
+% Stage 3
+\begin{scope}[on background layer]
+    \node (stage3) [stagebox=stage3border, fit=(stance_agent) (stance_reason) (stance_out), label={[anchor=north west, text=stage3border, font=\bfseries\footnotesize, xshift=10pt]north west:Stage 3}] {};
+\end{scope}
+
+\end{tikzpicture}%
+    }
+    \caption{Reasoning-Enhanced Agentic Workflow. The diagram illustrates the three-stage inference pipeline. At each stage, the agent generates an intermediate reasoning step (Lavender) before producing the structured output (Right), ensuring grounded decision-making.}
     \label{fig:workflow_diagram}
 \end{figure*}
 
@@ -405,6 +435,35 @@ The semantic similarity score for a predicted target $t_{pred}$ was calculated a
 $$ Sim(t_{pred}, t_{gt}) = \max_{t \in \{t_{gt}, t'_{gt1}, t'_{gt2}\}} \cos(E(t_{pred}), E(t)) $$
 
 where $E(\cdot)$ represents the embedding function from the Llama 3.1 8B model. This approach ensures that the system is not penalized for valid synonyms or alternative phrasings.
+
+\begin{algorithm}
+\caption{Ground Truth Expansion Evaluation Protocol}
+\label{alg:eval_protocol}
+\begin{algorithmic}[1]
+\REQUIRE Tweet $X$, Ground Truth Target $T_{gt}$, Predicted Target $T_{pred}$
+\REQUIRE Embedding Function $E(\cdot)$, Expansion Model $LLM(\cdot)$
+\ENSURE Semantic Similarity Score $S_{sim}$
+
+\STATE \textbf{Step 1: Ground Truth Expansion}
+\STATE \COMMENT{Generate semantic variations of the ground truth using context}
+\STATE $T'_{gt1}, T'_{gt2} \leftarrow LLM(X, T_{gt})$
+\STATE $\mathcal{T}_{expanded} \leftarrow \{T_{gt}, T'_{gt1}, T'_{gt2}\}$
+
+\STATE \textbf{Step 2: Embedding and Similarity}
+\STATE $V_{pred} \leftarrow E(T_{pred})$
+\STATE $S_{max} \leftarrow 0$
+
+\FOR{each $T$ in $\mathcal{T}_{expanded}$}
+    \STATE $V_{ref} \leftarrow E(T)$
+    \STATE $Sim \leftarrow \cos(V_{pred}, V_{ref})$
+    \IF{$Sim > S_{max}$}
+        \STATE $S_{max} \leftarrow Sim$
+    \ENDIF
+\ENDFOR
+
+\RETURN $S_{max}$
+\end{algorithmic}
+\end{algorithm}
 
 \section{Results}
 
